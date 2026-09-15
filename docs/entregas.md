@@ -14,11 +14,12 @@ ST Energy pero orientada a venta en vez de alquiler.
   backup del 2026-09-15.
 - ✅ `content/dependencias.md` — qué tema y plugins usa la landing, y por
   qué Elementor Pro no se incluye como código (solo se documenta su uso).
-- 🔲 Capturas de pantalla de la landing en vivo (agregar en
-  `content/entrega-1-landing/screenshots/`).
-- 🔲 Datos de ejemplo de WooCommerce con stock (para reemplazar la lógica
-  de alquiler en los widgets de productos, de cara a que el profesor vea
-  un modelo de venta, no de alquiler).
+- ✅ `content/entrega-1-landing/screenshots/` — capturas de la landing real
+  en vivo, en orden de scroll.
+- ✅ `content/entrega-1-landing/productos-woocommerce-ejemplo.csv` — 10
+  productos ficticios en modalidad de venta con stock, listos para
+  importar en WooCommerce y reemplazar los productos reales de alquiler
+  que hoy alimentan los carruseles de la landing.
 
 **Fuera de alcance:** catálogo completo, carrito, checkout, base de datos de
 productos real.

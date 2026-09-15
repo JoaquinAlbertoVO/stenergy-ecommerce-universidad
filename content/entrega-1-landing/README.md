@@ -34,10 +34,25 @@ funcionando de verdad hace falta una licencia propia de Elementor Pro
 instalada localmente — eso se hace en el entorno local de cada uno, nunca
 subiendo el plugin al repo.
 
+## Catálogo de ejemplo (WooCommerce)
+
+`productos-woocommerce-ejemplo.csv` trae 10 productos ficticios de
+ingeniería eléctrica **en modalidad de venta con stock** (no de alquiler),
+listos para importar desde **WordPress > Productos > Importar** (el
+importador nativo de WooCommerce). Reemplaza los productos reales de
+alquiler que hoy alimentan los widgets `loop-carousel` /
+`woocommerce-products` de la landing.
+
+## Capturas
+
+`screenshots/` tiene la landing real (`strental.com.pe`) capturada en
+orden de scroll, como evidencia visual del diseño mientras se arma el
+entorno local con Elementor Pro + WooCommerce + el catálogo de ejemplo.
+
 ## Qué falta para que esto sea "navegable"
 
-Este archivo por sí solo no arma un sitio funcional: hace falta el tema
-(Hello Elementor), los plugins de la lista de dependencias, y WooCommerce
-con al menos algunos productos de ejemplo (con stock, no con precio de
-alquiler). Para la Entrega 1 alcanza con mostrar este contenido +
-capturas/demo de la página real como evidencia del avance.
+Este contenido por sí solo no arma un sitio funcional: hace falta instalar
+el tema (Hello Elementor), los plugins de la lista de dependencias
+(incluyendo una licencia propia de Elementor Pro) y WooCommerce con el
+catálogo de ejemplo importado. Para la Entrega 1 alcanza con mostrar este
+contenido + las capturas como evidencia del avance.

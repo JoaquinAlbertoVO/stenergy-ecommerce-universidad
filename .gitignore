@@ -15,21 +15,10 @@ wp-config.php
 *.zip
 *.tar.gz
 
-# Volcados de base de datos: solo se permiten los de muestra dentro de /database/muestra
-# y el contenido de páginas ya extraído/revisado dentro de /content
+# Volcados de base de datos: solo se permite el contenido ya extraído/revisado
+# dentro de /content (ver content/entrega-1-landing/homepage.sql)
 *.sql
-!database/muestra/*.sql
 !content/**/*.sql
 
-# Caché y temporales de WordPress
-wp-content/cache/
-wp-content/et-cache/
-wp-content/uploads/elementor/css/
-wp-content/upgrade/
-wp-content/backup-db/
-wp-content/backups/
-wp-content/updraft/
-wp-content/ai1wm-backups/
-
-# Plugins de pago / con licencia no redistribuible
-wp-content/plugins/pro-elements/
+# No se versiona código de plugins/temas de terceros (ver content/dependencias.md)
+wp-content/
