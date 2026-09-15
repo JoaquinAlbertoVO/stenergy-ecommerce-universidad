@@ -1,0 +1,33 @@
+# Archivos de sistema y entorno
+.DS_Store
+Thumbs.db
+*.log
+*.env
+*.bak
+
+# Credenciales y configuración de WordPress (NUNCA subir esto)
+wp-config.php
+.htpasswd
+
+# Backups completos (.wpress, .zip, .tar.gz) - pesan mucho y pueden traer datos reales
+# Solo se sube el contenido ya extraído y curado para el entregable correspondiente
+*.wpress
+*.zip
+*.tar.gz
+
+# Volcados de base de datos: solo se permiten los de muestra dentro de /database/muestra
+*.sql
+!database/muestra/*.sql
+
+# Caché y temporales de WordPress
+wp-content/cache/
+wp-content/et-cache/
+wp-content/uploads/elementor/css/
+wp-content/upgrade/
+wp-content/backup-db/
+wp-content/backups/
+wp-content/updraft/
+wp-content/ai1wm-backups/
+
+# Plugins de pago / con licencia no redistribuible
+wp-content/plugins/pro-elements/
