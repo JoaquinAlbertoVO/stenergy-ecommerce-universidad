@@ -8,13 +8,17 @@
 destacadas, propuesta de valor, contacto), adaptada de la landing real de
 ST Energy pero orientada a venta en vez de alquiler.
 
-**Contenido esperado en el repo:**
-- Tema/plantilla usada por la landing (extraído del export de WordPress).
-- Plugin Elementor (gratuito) y cualquier otro plugin gratuito estrictamente
-  necesario para que la landing se vea igual (ej. Contact Form 7 si hay
-  formulario de contacto en el home).
-- Capturas de pantalla o video corto de la landing funcionando, por si el
-  profesor no puede levantar el sitio localmente.
+**Contenido en el repo (avance actual):**
+- ✅ `content/entrega-1-landing/homepage.sql` — contenido real de la página
+  de inicio (texto, estructura de Elementor), extraído y revisado del
+  backup del 2026-09-15.
+- ✅ `content/dependencias.md` — qué tema y plugins usa la landing, y por
+  qué Elementor Pro no se incluye como código (solo se documenta su uso).
+- 🔲 Capturas de pantalla de la landing en vivo (agregar en
+  `content/entrega-1-landing/screenshots/`).
+- 🔲 Datos de ejemplo de WooCommerce con stock (para reemplazar la lógica
+  de alquiler en los widgets de productos, de cara a que el profesor vea
+  un modelo de venta, no de alquiler).
 
 **Fuera de alcance:** catálogo completo, carrito, checkout, base de datos de
 productos real.
