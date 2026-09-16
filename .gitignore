@@ -5,20 +5,24 @@ Thumbs.db
 *.env
 *.bak
 
-# Credenciales y configuración de WordPress (NUNCA subir esto)
+# Credenciales y configuración de WordPress (NUNCA subir esto) - cada quien crea el suyo desde wp-config-sample.php
 wp-config.php
 .htpasswd
 
 # Backups completos (.wpress, .zip, .tar.gz) - pesan mucho y pueden traer datos reales
-# Solo se sube el contenido ya extraído y curado para el entregable correspondiente
 *.wpress
 *.zip
 *.tar.gz
 
-# Volcados de base de datos: solo se permite el contenido ya extraído/revisado
-# dentro de /content (ver content/entrega-1-landing/homepage.sql)
+# Volcados de base de datos: solo se permite el contenido ya extraído/revisado en sample-data/
 *.sql
-!content/**/*.sql
+!sample-data/*.sql
 
-# No se versiona código de plugins/temas de terceros (ver content/dependencias.md)
-wp-content/
+# Cachés y temporales de WordPress
+wp-content/cache/
+wp-content/upgrade/
+wp-content/uploads/
+wp-content/debug.log
+
+# Plugin de pago excluido por licencia (ver INSTALL.md)
+wp-content/plugins/pro-elements/

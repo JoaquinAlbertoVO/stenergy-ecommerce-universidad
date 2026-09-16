@@ -1,0 +1,48 @@
+[08-Oct-2025 13:46:58 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\Modules\AtomicWidgets\PropTypes\Color_Prop_Type" not found in /home/strental/public_html/wp-content/plugins/elementor/modules/atomic-widgets/prop-types/background-color-overlay-prop-type.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/modules/atomic-widgets/prop-types/background-color-overlay-prop-type.php on line 5
+[09-Oct-2025 02:06:46 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\Modules\AtomicWidgets\PropTypes\Color_Prop_Type" not found in /home/strental/public_html/wp-content/plugins/elementor/modules/atomic-widgets/prop-types/background-color-overlay-prop-type.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/modules/atomic-widgets/prop-types/background-color-overlay-prop-type.php on line 5
+[09-Oct-2025 02:23:32 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\Modules\AtomicWidgets\PropTypes\Color_Prop_Type" not found in /home/strental/public_html/wp-content/plugins/elementor/modules/atomic-widgets/prop-types/background-color-overlay-prop-type.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/modules/atomic-widgets/prop-types/background-color-overlay-prop-type.php on line 5
+[09-Oct-2025 02:36:39 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\Modules\AtomicWidgets\PropTypes\Color_Prop_Type" not found in /home/strental/public_html/wp-content/plugins/elementor/modules/atomic-widgets/prop-types/background-color-overlay-prop-type.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/modules/atomic-widgets/prop-types/background-color-overlay-prop-type.php on line 5
+[04-Nov-2025 05:48:36 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\Modules\AtomicWidgets\PropTypes\Color_Prop_Type" not found in /home/strental/public_html/wp-content/plugins/elementor/modules/atomic-widgets/prop-types/background-color-overlay-prop-type.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/modules/atomic-widgets/prop-types/background-color-overlay-prop-type.php on line 5
+[04-Nov-2025 16:30:19 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\Modules\AtomicWidgets\PropTypes\Color_Prop_Type" not found in /home/strental/public_html/wp-content/plugins/elementor/modules/atomic-widgets/prop-types/background-color-overlay-prop-type.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/modules/atomic-widgets/prop-types/background-color-overlay-prop-type.php on line 5
+[04-Nov-2025 16:47:12 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\Modules\AtomicWidgets\PropTypes\Color_Prop_Type" not found in /home/strental/public_html/wp-content/plugins/elementor/modules/atomic-widgets/prop-types/background-color-overlay-prop-type.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/modules/atomic-widgets/prop-types/background-color-overlay-prop-type.php on line 5
+[14-Dec-2025 23:04:55 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\Modules\AtomicWidgets\PropTypes\Color_Prop_Type" not found in /home/strental/public_html/wp-content/plugins/elementor/modules/atomic-widgets/prop-types/background-color-overlay-prop-type.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/modules/atomic-widgets/prop-types/background-color-overlay-prop-type.php on line 5
+[15-Dec-2025 10:04:31 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\Modules\AtomicWidgets\PropTypes\Color_Prop_Type" not found in /home/strental/public_html/wp-content/plugins/elementor/modules/atomic-widgets/prop-types/background-color-overlay-prop-type.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/modules/atomic-widgets/prop-types/background-color-overlay-prop-type.php on line 5
+[15-Dec-2025 10:05:55 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\Modules\AtomicWidgets\PropTypes\Color_Prop_Type" not found in /home/strental/public_html/wp-content/plugins/elementor/modules/atomic-widgets/prop-types/background-color-overlay-prop-type.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/modules/atomic-widgets/prop-types/background-color-overlay-prop-type.php on line 5
+[15-Dec-2025 10:16:36 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\Modules\AtomicWidgets\PropTypes\Color_Prop_Type" not found in /home/strental/public_html/wp-content/plugins/elementor/modules/atomic-widgets/prop-types/background-color-overlay-prop-type.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/modules/atomic-widgets/prop-types/background-color-overlay-prop-type.php on line 5
+[15-Dec-2025 10:24:40 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\Modules\AtomicWidgets\PropTypes\Color_Prop_Type" not found in /home/strental/public_html/wp-content/plugins/elementor/modules/atomic-widgets/prop-types/background-color-overlay-prop-type.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/modules/atomic-widgets/prop-types/background-color-overlay-prop-type.php on line 5

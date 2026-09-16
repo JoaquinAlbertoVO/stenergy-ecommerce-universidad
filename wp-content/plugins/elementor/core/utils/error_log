@@ -1,0 +1,64 @@
+[08-Oct-2025 15:16:56 UTC] PHP Fatal error:  Uncaught Error: Undefined constant "Elementor\Core\Utils\ABSPATH" in /home/strental/public_html/wp-content/plugins/elementor/core/utils/plugins-manager.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/core/utils/plugins-manager.php on line 5
+[08-Oct-2025 23:42:40 UTC] PHP Fatal error:  Uncaught Error: Undefined constant "Elementor\Core\Utils\ABSPATH" in /home/strental/public_html/wp-content/plugins/elementor/core/utils/plugins-manager.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/core/utils/plugins-manager.php on line 5
+[08-Oct-2025 23:43:34 UTC] PHP Fatal error:  Uncaught Error: Undefined constant "Elementor\Core\Utils\ABSPATH" in /home/strental/public_html/wp-content/plugins/elementor/core/utils/plugins-manager.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/core/utils/plugins-manager.php on line 5
+[08-Oct-2025 23:44:01 UTC] PHP Fatal error:  Uncaught Error: Undefined constant "Elementor\Core\Utils\ABSPATH" in /home/strental/public_html/wp-content/plugins/elementor/core/utils/plugins-manager.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/core/utils/plugins-manager.php on line 5
+[04-Nov-2025 07:35:14 UTC] PHP Fatal error:  Uncaught Error: Undefined constant "Elementor\Core\Utils\ABSPATH" in /home/strental/public_html/wp-content/plugins/elementor/core/utils/plugins-manager.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/core/utils/plugins-manager.php on line 5
+[04-Nov-2025 14:53:56 UTC] PHP Fatal error:  Uncaught Error: Undefined constant "Elementor\Core\Utils\ABSPATH" in /home/strental/public_html/wp-content/plugins/elementor/core/utils/plugins-manager.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/core/utils/plugins-manager.php on line 5
+[04-Nov-2025 14:54:28 UTC] PHP Fatal error:  Uncaught Error: Undefined constant "Elementor\Core\Utils\ABSPATH" in /home/strental/public_html/wp-content/plugins/elementor/core/utils/plugins-manager.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/core/utils/plugins-manager.php on line 5
+[04-Nov-2025 14:55:08 UTC] PHP Fatal error:  Uncaught Error: Undefined constant "Elementor\Core\Utils\ABSPATH" in /home/strental/public_html/wp-content/plugins/elementor/core/utils/plugins-manager.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/core/utils/plugins-manager.php on line 5
+[04-Nov-2025 14:57:46 UTC] PHP Fatal error:  Uncaught Error: Undefined constant "Elementor\Core\Utils\ABSPATH" in /home/strental/public_html/wp-content/plugins/elementor/core/utils/plugins-manager.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/core/utils/plugins-manager.php on line 5
+[04-Nov-2025 14:59:00 UTC] PHP Fatal error:  Uncaught Error: Undefined constant "Elementor\Core\Utils\ABSPATH" in /home/strental/public_html/wp-content/plugins/elementor/core/utils/plugins-manager.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/core/utils/plugins-manager.php on line 5
+[15-Dec-2025 00:25:25 UTC] PHP Fatal error:  Uncaught Error: Undefined constant "Elementor\Core\Utils\ABSPATH" in /home/strental/public_html/wp-content/plugins/elementor/core/utils/plugins-manager.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/core/utils/plugins-manager.php on line 5
+[15-Dec-2025 08:43:13 UTC] PHP Fatal error:  Uncaught Error: Undefined constant "Elementor\Core\Utils\ABSPATH" in /home/strental/public_html/wp-content/plugins/elementor/core/utils/plugins-manager.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/core/utils/plugins-manager.php on line 5
+[15-Dec-2025 08:44:01 UTC] PHP Fatal error:  Uncaught Error: Undefined constant "Elementor\Core\Utils\ABSPATH" in /home/strental/public_html/wp-content/plugins/elementor/core/utils/plugins-manager.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/core/utils/plugins-manager.php on line 5
+[15-Dec-2025 08:44:27 UTC] PHP Fatal error:  Uncaught Error: Undefined constant "Elementor\Core\Utils\ABSPATH" in /home/strental/public_html/wp-content/plugins/elementor/core/utils/plugins-manager.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/core/utils/plugins-manager.php on line 5
+[15-Dec-2025 08:44:52 UTC] PHP Fatal error:  Uncaught Error: Undefined constant "Elementor\Core\Utils\ABSPATH" in /home/strental/public_html/wp-content/plugins/elementor/core/utils/plugins-manager.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/core/utils/plugins-manager.php on line 5
+[15-Dec-2025 08:45:15 UTC] PHP Fatal error:  Uncaught Error: Undefined constant "Elementor\Core\Utils\ABSPATH" in /home/strental/public_html/wp-content/plugins/elementor/core/utils/plugins-manager.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/core/utils/plugins-manager.php on line 5

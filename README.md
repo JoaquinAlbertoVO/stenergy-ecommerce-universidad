@@ -6,6 +6,10 @@ real de alquiler de **ST Energy** (`strental.com.pe`), pero adaptado al
 requisito del curso: en vez de alquiler, este proyecto maneja **venta con
 inventario/stock**.
 
+Este es un proyecto WordPress completo y clonable: incluye el núcleo de
+WordPress, el tema y los plugins gratuitos usados por la landing. Para
+levantarlo en tu propio localhost, sigue [`INSTALL.md`](INSTALL.md).
+
 ## Estado actual
 
 ✅ **Entrega 1 — Landing page** (esta entrega)
@@ -25,38 +29,33 @@ Detalle de alcance de cada entrega en [`docs/entregas.md`](docs/entregas.md).
 ![Por qué elegirnos](content/entrega-1-landing/screenshots/05-porque-elegirnos.png)
 ![Footer y contacto](content/entrega-1-landing/screenshots/06-footer-contacto.png)
 
-Estas son capturas reales de la página funcionando (no un mockup). El
-contenido y la estructura de Elementor detrás de esta página están en
-[`content/entrega-1-landing/`](content/entrega-1-landing/), junto con un
-catálogo de ejemplo para WooCommerce
-(`productos-woocommerce-ejemplo.csv`) en modalidad de venta con stock.
-
-## Qué NO va en este repositorio
-
-- **Código de plugins de terceros**, ni gratis ni de pago (Elementor,
-  Elementor Pro, WooCommerce, etc.) — se documentan como dependencias en
-  [`content/dependencias.md`](content/dependencias.md), no se vendorizan.
-  En especial, **Elementor Pro** es de pago y su licencia no permite
-  redistribuir su código fuente.
-- **Datos comerciales reales** de ST Energy (proveedores, precios de
-  alquiler reales, clientes, pedidos). El catálogo de ejemplo usa
-  productos y precios ficticios, en modalidad de venta (no alquiler).
-- **`wp-config.php`** ni ninguna credencial de base de datos.
-- Backups completos (`.wpress`, `.zip`) — se sube el contenido ya extraído
-  y revisado, no el backup crudo.
-
 ## Estructura
 
 ```text
 stenergy-ecommerce-universidad/
-├── README.md
+├── INSTALL.md                 # cómo clonar y levantar el sitio en tu localhost
+├── wp-admin/, wp-includes/, wp-*.php   # núcleo de WordPress (oficial, GPL)
+├── wp-config-sample.php       # copiar a wp-config.php con tus datos de BD
+├── wp-content/
+│   ├── themes/hello-elementor/
+│   └── plugins/                # Elementor, WooCommerce, Essential Addons, etc. (todos gratuitos)
+├── sample-data/
+│   ├── homepage.sql            # contenido real de la home (texto + Elementor)
+│   └── productos-woocommerce-ejemplo.csv  # catálogo de ejemplo con stock
 ├── docs/
-│   └── entregas.md                        # alcance de cada entrega + cómo se genera el contenido
+│   └── entregas.md             # alcance de cada entrega
 └── content/
-    ├── dependencias.md                    # tema y plugins usados, sin vendorizar código
+    ├── dependencias.md         # detalle de plugins y por qué Elementor Pro no está incluido
     └── entrega-1-landing/
-        ├── README.md                      # qué es este contenido y qué le falta
-        ├── homepage.sql                   # wp_posts/wp_postmeta reales de la home
-        ├── productos-woocommerce-ejemplo.csv  # catálogo de ejemplo (Products > Import)
-        └── screenshots/                   # capturas de la landing real en vivo
+        └── screenshots/        # capturas de la landing real en vivo
 ```
+
+## Qué NO va en este repositorio
+
+- **Elementor Pro**: es un plugin de pago, su licencia no permite
+  redistribuir el código fuente. Ver [`INSTALL.md`](INSTALL.md) para el
+  detalle de qué secciones de la landing lo necesitan.
+- **Datos comerciales reales** de ST Energy (proveedores, precios de
+  alquiler reales, clientes, pedidos). El catálogo de ejemplo usa
+  productos y precios ficticios, en modalidad de venta (no alquiler).
+- **`wp-config.php`** ni ninguna credencial de base de datos real.

@@ -1,0 +1,12 @@
+[08-Oct-2025 15:43:09 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function esc_html__() in /home/strental/public_html/wp-content/plugins/elementor/core/kits/views/panel.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/core/kits/views/panel.php on line 12
+[04-Nov-2025 08:07:44 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function esc_html__() in /home/strental/public_html/wp-content/plugins/elementor/core/kits/views/panel.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/core/kits/views/panel.php on line 12
+[15-Dec-2025 00:49:57 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function esc_html__() in /home/strental/public_html/wp-content/plugins/elementor/core/kits/views/panel.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/core/kits/views/panel.php on line 12

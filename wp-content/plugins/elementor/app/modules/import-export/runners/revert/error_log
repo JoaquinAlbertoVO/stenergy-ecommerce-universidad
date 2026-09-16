@@ -1,0 +1,220 @@
+[08-Oct-2025 16:43:05 UTC] PHP Fatal error:  Uncaught Error: Interface "Elementor\App\Modules\ImportExport\Runners\Runner_Interface" not found in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/revert-runner-base.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/revert-runner-base.php on line 7
+[08-Oct-2025 16:43:22 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\App\Modules\ImportExport\Runners\Revert\Revert_Runner_Base" not found in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/site-settings.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/site-settings.php on line 7
+[08-Oct-2025 16:44:53 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\App\Modules\ImportExport\Runners\Revert\Revert_Runner_Base" not found in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/taxonomies.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/taxonomies.php on line 5
+[08-Oct-2025 16:53:08 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\App\Modules\ImportExport\Runners\Revert\Revert_Runner_Base" not found in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/templates.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/templates.php on line 5
+[08-Oct-2025 16:57:27 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\App\Modules\ImportExport\Runners\Revert\Revert_Runner_Base" not found in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/plugins.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/plugins.php on line 5
+[08-Oct-2025 17:02:33 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\App\Modules\ImportExport\Runners\Revert\Revert_Runner_Base" not found in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/elementor-content.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/elementor-content.php on line 8
+[08-Oct-2025 17:03:38 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\App\Modules\ImportExport\Runners\Revert\Revert_Runner_Base" not found in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/wp-content.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/wp-content.php on line 7
+[08-Oct-2025 20:48:26 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\App\Modules\ImportExport\Runners\Revert\Revert_Runner_Base" not found in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/site-settings.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/site-settings.php on line 7
+[08-Oct-2025 20:48:34 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\App\Modules\ImportExport\Runners\Revert\Revert_Runner_Base" not found in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/taxonomies.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/taxonomies.php on line 5
+[08-Oct-2025 20:48:56 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\App\Modules\ImportExport\Runners\Revert\Revert_Runner_Base" not found in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/templates.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/templates.php on line 5
+[08-Oct-2025 20:49:12 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\App\Modules\ImportExport\Runners\Revert\Revert_Runner_Base" not found in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/plugins.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/plugins.php on line 5
+[08-Oct-2025 20:51:00 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\App\Modules\ImportExport\Runners\Revert\Revert_Runner_Base" not found in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/wp-content.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/wp-content.php on line 7
+[08-Oct-2025 20:53:56 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\App\Modules\ImportExport\Runners\Revert\Revert_Runner_Base" not found in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/taxonomies.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/taxonomies.php on line 5
+[08-Oct-2025 20:54:51 UTC] PHP Fatal error:  Uncaught Error: Interface "Elementor\App\Modules\ImportExport\Runners\Runner_Interface" not found in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/revert-runner-base.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/revert-runner-base.php on line 7
+[08-Oct-2025 20:56:58 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\App\Modules\ImportExport\Runners\Revert\Revert_Runner_Base" not found in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/site-settings.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/site-settings.php on line 7
+[08-Oct-2025 20:58:59 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\App\Modules\ImportExport\Runners\Revert\Revert_Runner_Base" not found in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/elementor-content.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/elementor-content.php on line 8
+[08-Oct-2025 21:00:58 UTC] PHP Fatal error:  Uncaught Error: Interface "Elementor\App\Modules\ImportExport\Runners\Runner_Interface" not found in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/revert-runner-base.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/revert-runner-base.php on line 7
+[08-Oct-2025 21:08:25 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\App\Modules\ImportExport\Runners\Revert\Revert_Runner_Base" not found in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/site-settings.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/site-settings.php on line 7
+[08-Oct-2025 21:08:50 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\App\Modules\ImportExport\Runners\Revert\Revert_Runner_Base" not found in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/plugins.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/plugins.php on line 5
+[08-Oct-2025 21:09:50 UTC] PHP Fatal error:  Uncaught Error: Interface "Elementor\App\Modules\ImportExport\Runners\Runner_Interface" not found in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/revert-runner-base.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/revert-runner-base.php on line 7
+[08-Oct-2025 21:10:52 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\App\Modules\ImportExport\Runners\Revert\Revert_Runner_Base" not found in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/templates.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/templates.php on line 5
+[08-Oct-2025 21:11:56 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\App\Modules\ImportExport\Runners\Revert\Revert_Runner_Base" not found in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/taxonomies.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/taxonomies.php on line 5
+[08-Oct-2025 21:16:51 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\App\Modules\ImportExport\Runners\Revert\Revert_Runner_Base" not found in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/elementor-content.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/elementor-content.php on line 8
+[08-Oct-2025 21:17:47 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\App\Modules\ImportExport\Runners\Revert\Revert_Runner_Base" not found in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/wp-content.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/wp-content.php on line 7
+[04-Nov-2025 08:51:17 UTC] PHP Fatal error:  Uncaught Error: Interface "Elementor\App\Modules\ImportExport\Runners\Runner_Interface" not found in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/revert-runner-base.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/revert-runner-base.php on line 7
+[04-Nov-2025 08:53:53 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\App\Modules\ImportExport\Runners\Revert\Revert_Runner_Base" not found in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/templates.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/templates.php on line 5
+[04-Nov-2025 09:00:08 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\App\Modules\ImportExport\Runners\Revert\Revert_Runner_Base" not found in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/taxonomies.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/taxonomies.php on line 5
+[04-Nov-2025 09:03:12 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\App\Modules\ImportExport\Runners\Revert\Revert_Runner_Base" not found in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/site-settings.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/site-settings.php on line 7
+[04-Nov-2025 09:21:20 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\App\Modules\ImportExport\Runners\Revert\Revert_Runner_Base" not found in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/wp-content.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/wp-content.php on line 7
+[04-Nov-2025 12:40:00 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\App\Modules\ImportExport\Runners\Revert\Revert_Runner_Base" not found in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/taxonomies.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/taxonomies.php on line 5
+[04-Nov-2025 12:42:37 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\App\Modules\ImportExport\Runners\Revert\Revert_Runner_Base" not found in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/wp-content.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/wp-content.php on line 7
+[04-Nov-2025 12:46:20 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\App\Modules\ImportExport\Runners\Revert\Revert_Runner_Base" not found in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/templates.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/templates.php on line 5
+[04-Nov-2025 12:49:57 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\App\Modules\ImportExport\Runners\Revert\Revert_Runner_Base" not found in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/taxonomies.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/taxonomies.php on line 5
+[04-Nov-2025 12:55:00 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\App\Modules\ImportExport\Runners\Revert\Revert_Runner_Base" not found in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/wp-content.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/wp-content.php on line 7
+[15-Dec-2025 02:23:32 UTC] PHP Fatal error:  Uncaught Error: Interface "Elementor\App\Modules\ImportExport\Runners\Runner_Interface" not found in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/revert-runner-base.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/revert-runner-base.php on line 7
+[15-Dec-2025 02:23:33 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\App\Modules\ImportExport\Runners\Revert\Revert_Runner_Base" not found in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/site-settings.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/site-settings.php on line 7
+[15-Dec-2025 02:25:51 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\App\Modules\ImportExport\Runners\Revert\Revert_Runner_Base" not found in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/taxonomies.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/taxonomies.php on line 5
+[15-Dec-2025 02:28:57 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\App\Modules\ImportExport\Runners\Revert\Revert_Runner_Base" not found in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/templates.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/templates.php on line 5
+[15-Dec-2025 02:54:09 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\App\Modules\ImportExport\Runners\Revert\Revert_Runner_Base" not found in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/plugins.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/plugins.php on line 5
+[15-Dec-2025 02:56:14 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\App\Modules\ImportExport\Runners\Revert\Revert_Runner_Base" not found in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/elementor-content.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/elementor-content.php on line 8
+[15-Dec-2025 02:59:19 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\App\Modules\ImportExport\Runners\Revert\Revert_Runner_Base" not found in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/wp-content.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/wp-content.php on line 7
+[15-Dec-2025 06:26:33 UTC] PHP Fatal error:  Uncaught Error: Interface "Elementor\App\Modules\ImportExport\Runners\Runner_Interface" not found in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/revert-runner-base.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/revert-runner-base.php on line 7
+[15-Dec-2025 06:26:33 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\App\Modules\ImportExport\Runners\Revert\Revert_Runner_Base" not found in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/site-settings.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/site-settings.php on line 7
+[15-Dec-2025 06:26:35 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\App\Modules\ImportExport\Runners\Revert\Revert_Runner_Base" not found in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/taxonomies.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/taxonomies.php on line 5
+[15-Dec-2025 06:26:39 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\App\Modules\ImportExport\Runners\Revert\Revert_Runner_Base" not found in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/templates.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/templates.php on line 5
+[15-Dec-2025 06:26:53 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\App\Modules\ImportExport\Runners\Revert\Revert_Runner_Base" not found in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/plugins.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/plugins.php on line 5
+[15-Dec-2025 06:27:36 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\App\Modules\ImportExport\Runners\Revert\Revert_Runner_Base" not found in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/elementor-content.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/elementor-content.php on line 8
+[15-Dec-2025 06:28:42 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\App\Modules\ImportExport\Runners\Revert\Revert_Runner_Base" not found in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/wp-content.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/wp-content.php on line 7
+[15-Dec-2025 06:36:56 UTC] PHP Fatal error:  Uncaught Error: Interface "Elementor\App\Modules\ImportExport\Runners\Runner_Interface" not found in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/revert-runner-base.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/revert-runner-base.php on line 7
+[15-Dec-2025 06:37:16 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\App\Modules\ImportExport\Runners\Revert\Revert_Runner_Base" not found in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/site-settings.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/site-settings.php on line 7
+[15-Dec-2025 06:38:13 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\App\Modules\ImportExport\Runners\Revert\Revert_Runner_Base" not found in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/taxonomies.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/taxonomies.php on line 5
+[15-Dec-2025 06:39:16 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\App\Modules\ImportExport\Runners\Revert\Revert_Runner_Base" not found in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/templates.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/templates.php on line 5
+[15-Dec-2025 06:40:20 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\App\Modules\ImportExport\Runners\Revert\Revert_Runner_Base" not found in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/plugins.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/plugins.php on line 5
+[15-Dec-2025 06:41:24 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\App\Modules\ImportExport\Runners\Revert\Revert_Runner_Base" not found in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/elementor-content.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/elementor-content.php on line 8
+[15-Dec-2025 06:42:27 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\App\Modules\ImportExport\Runners\Revert\Revert_Runner_Base" not found in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/wp-content.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/app/modules/import-export/runners/revert/wp-content.php on line 7

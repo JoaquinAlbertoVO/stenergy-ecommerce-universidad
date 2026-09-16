@@ -1,0 +1,92 @@
+[08-Oct-2025 16:16:00 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\Core\Editor\Data\Globals\Endpoints\Base" not found in /home/strental/public_html/wp-content/plugins/elementor/core/editor/data/globals/endpoints/colors.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/core/editor/data/globals/endpoints/colors.php on line 6
+[08-Oct-2025 16:16:41 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\Data\V2\Base\Endpoint" not found in /home/strental/public_html/wp-content/plugins/elementor/core/editor/data/globals/endpoints/base.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/core/editor/data/globals/endpoints/base.php on line 9
+[08-Oct-2025 16:19:42 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\Core\Editor\Data\Globals\Endpoints\Base" not found in /home/strental/public_html/wp-content/plugins/elementor/core/editor/data/globals/endpoints/typography.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/core/editor/data/globals/endpoints/typography.php on line 6
+[08-Oct-2025 21:14:58 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\Core\Editor\Data\Globals\Endpoints\Base" not found in /home/strental/public_html/wp-content/plugins/elementor/core/editor/data/globals/endpoints/colors.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/core/editor/data/globals/endpoints/colors.php on line 6
+[08-Oct-2025 21:18:48 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\Data\V2\Base\Endpoint" not found in /home/strental/public_html/wp-content/plugins/elementor/core/editor/data/globals/endpoints/base.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/core/editor/data/globals/endpoints/base.php on line 9
+[08-Oct-2025 21:25:52 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\Core\Editor\Data\Globals\Endpoints\Base" not found in /home/strental/public_html/wp-content/plugins/elementor/core/editor/data/globals/endpoints/typography.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/core/editor/data/globals/endpoints/typography.php on line 6
+[08-Oct-2025 21:29:11 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\Data\V2\Base\Endpoint" not found in /home/strental/public_html/wp-content/plugins/elementor/core/editor/data/globals/endpoints/base.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/core/editor/data/globals/endpoints/base.php on line 9
+[08-Oct-2025 21:31:03 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\Core\Editor\Data\Globals\Endpoints\Base" not found in /home/strental/public_html/wp-content/plugins/elementor/core/editor/data/globals/endpoints/typography.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/core/editor/data/globals/endpoints/typography.php on line 6
+[08-Oct-2025 21:35:40 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\Core\Editor\Data\Globals\Endpoints\Base" not found in /home/strental/public_html/wp-content/plugins/elementor/core/editor/data/globals/endpoints/colors.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/core/editor/data/globals/endpoints/colors.php on line 6
+[08-Oct-2025 21:43:09 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\Data\V2\Base\Endpoint" not found in /home/strental/public_html/wp-content/plugins/elementor/core/editor/data/globals/endpoints/base.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/core/editor/data/globals/endpoints/base.php on line 9
+[04-Nov-2025 08:28:31 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\Data\V2\Base\Endpoint" not found in /home/strental/public_html/wp-content/plugins/elementor/core/editor/data/globals/endpoints/base.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/core/editor/data/globals/endpoints/base.php on line 9
+[04-Nov-2025 08:31:39 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\Core\Editor\Data\Globals\Endpoints\Base" not found in /home/strental/public_html/wp-content/plugins/elementor/core/editor/data/globals/endpoints/colors.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/core/editor/data/globals/endpoints/colors.php on line 6
+[04-Nov-2025 13:02:54 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\Core\Editor\Data\Globals\Endpoints\Base" not found in /home/strental/public_html/wp-content/plugins/elementor/core/editor/data/globals/endpoints/colors.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/core/editor/data/globals/endpoints/colors.php on line 6
+[04-Nov-2025 13:04:29 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\Data\V2\Base\Endpoint" not found in /home/strental/public_html/wp-content/plugins/elementor/core/editor/data/globals/endpoints/base.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/core/editor/data/globals/endpoints/base.php on line 9
+[15-Dec-2025 02:09:07 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\Data\V2\Base\Endpoint" not found in /home/strental/public_html/wp-content/plugins/elementor/core/editor/data/globals/endpoints/base.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/core/editor/data/globals/endpoints/base.php on line 9
+[15-Dec-2025 02:09:50 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\Core\Editor\Data\Globals\Endpoints\Base" not found in /home/strental/public_html/wp-content/plugins/elementor/core/editor/data/globals/endpoints/colors.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/core/editor/data/globals/endpoints/colors.php on line 6
+[15-Dec-2025 02:11:59 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\Core\Editor\Data\Globals\Endpoints\Base" not found in /home/strental/public_html/wp-content/plugins/elementor/core/editor/data/globals/endpoints/typography.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/core/editor/data/globals/endpoints/typography.php on line 6
+[15-Dec-2025 06:53:07 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\Core\Editor\Data\Globals\Endpoints\Base" not found in /home/strental/public_html/wp-content/plugins/elementor/core/editor/data/globals/endpoints/colors.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/core/editor/data/globals/endpoints/colors.php on line 6
+[15-Dec-2025 06:53:13 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\Data\V2\Base\Endpoint" not found in /home/strental/public_html/wp-content/plugins/elementor/core/editor/data/globals/endpoints/base.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/core/editor/data/globals/endpoints/base.php on line 9
+[15-Dec-2025 06:53:30 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\Core\Editor\Data\Globals\Endpoints\Base" not found in /home/strental/public_html/wp-content/plugins/elementor/core/editor/data/globals/endpoints/typography.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/core/editor/data/globals/endpoints/typography.php on line 6
+[15-Dec-2025 07:01:30 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\Core\Editor\Data\Globals\Endpoints\Base" not found in /home/strental/public_html/wp-content/plugins/elementor/core/editor/data/globals/endpoints/colors.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/core/editor/data/globals/endpoints/colors.php on line 6
+[15-Dec-2025 07:01:49 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\Data\V2\Base\Endpoint" not found in /home/strental/public_html/wp-content/plugins/elementor/core/editor/data/globals/endpoints/base.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/core/editor/data/globals/endpoints/base.php on line 9
+[15-Dec-2025 07:02:47 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\Core\Editor\Data\Globals\Endpoints\Base" not found in /home/strental/public_html/wp-content/plugins/elementor/core/editor/data/globals/endpoints/typography.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/core/editor/data/globals/endpoints/typography.php on line 6

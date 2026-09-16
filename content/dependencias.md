@@ -1,36 +1,36 @@
 # Dependencias (plugins y tema)
 
-No se versiona código de plugins de terceros en este repositorio — ni
-gratuitos ni de pago. En su lugar, se documenta acá qué usa el sitio real
-para que cualquiera pueda reproducir el entorno instalando lo mismo.
+Este repositorio **sí incluye** el código de los plugins y el tema
+**gratuitos/GPL** usados por la landing (están en `wp-content/`). Lo único
+que se excluye es lo que no se puede redistribuir por licencia.
 
 ## Tema
 
-- **Hello Elementor** (gratuito, oficial de Elementor) — tema base, casi
-  todo el diseño lo arma Elementor por encima.
+- **Hello Elementor** (gratuito, oficial de Elementor) — incluido en
+  `wp-content/themes/hello-elementor`.
 
-## Plugins usados en la landing (Entrega 1)
+## Plugins incluidos en el repositorio (todos gratuitos/GPL)
 
-| Plugin | Tipo | Uso en la landing |
-|---|---|---|
-| Elementor | Gratuito | Maquetador de la página (widgets básicos) |
-| **Elementor Pro** | **De pago** | Widgets `loop-carousel` y `woocommerce-products` (carruseles/grillas de productos) |
-| WooCommerce | Gratuito | Fuente de los productos que muestran esos carruseles |
+| Plugin | Uso en la landing |
+|---|---|
+| Elementor | Maquetador de la página (widgets básicos) |
+| WooCommerce | Catálogo de productos (fuente de los carruseles) |
+| Essential Addons for Elementor | Widgets adicionales usados en la página |
+| FiboSearch (Ajax Search for WooCommerce) | Buscador del header |
+| Social Chat (WP WhatsApp Chat) | Botón flotante de WhatsApp |
+| Code Snippets | Fragmentos de código personalizados del sitio |
 
-## Otros plugins del sitio real (no necesarios para la Entrega 1)
+## Plugin excluido por licencia
 
-Akismet, All-in-One WP Migration, Code Snippets, Contact Form 7,
-Essential Addons for Elementor, Google Listings & Ads, Yoast SEO,
-WP Statistics, WP WhatsApp Chat, Ajax Search for WooCommerce.
-Se irán sumando a la lista según lo requiera cada entrega siguiente
-(catálogo, carrito, checkout).
+**Elementor Pro** — es un plugin de pago, su licencia no permite
+redistribuir el código fuente. La landing real usa dos de sus widgets
+(`loop-carousel` y `woocommerce-products`) para mostrar carruseles y
+grillas de productos de forma dinámica. Sin Elementor Pro instalado,
+el resto de la página funciona igual; solo esas dos secciones específicas
+no se renderizan. Ver [`INSTALL.md`](../INSTALL.md) para más detalle.
 
-## Nota sobre Elementor Pro
+## Otros plugins del sitio real (no incluidos, no necesarios para la Entrega 1)
 
-Es un plugin con licencia paga; redistribuir su código violaría los
-términos de esa licencia. Quien vaya a levantar el sitio localmente para
-desarrollar necesita su propia licencia (la empresa ya tiene una activa en
-el sitio real). El **contenido** de las páginas (qué texto/imagen va en
-cada widget) sí es propio y por eso se documenta en
-`entrega-1-landing/homepage.sql`; lo que no se comparte es el motor que
-interpreta ese contenido.
+Akismet, All-in-One WP Migration, Google Listings & Ads, Yoast SEO,
+WP Statistics. Se evaluará sumarlos según lo requiera cada entrega
+siguiente (catálogo, carrito, checkout).

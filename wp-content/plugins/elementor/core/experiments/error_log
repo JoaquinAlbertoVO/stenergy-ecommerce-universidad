@@ -1,0 +1,32 @@
+[08-Oct-2025 15:12:03 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\Modules\System_Info\Reporters\Base" not found in /home/strental/public_html/wp-content/plugins/elementor/core/experiments/experiments-reporter.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/core/experiments/experiments-reporter.php on line 13
+[09-Oct-2025 04:26:10 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\Modules\System_Info\Reporters\Base" not found in /home/strental/public_html/wp-content/plugins/elementor/core/experiments/experiments-reporter.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/core/experiments/experiments-reporter.php on line 13
+[09-Oct-2025 04:26:42 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\Modules\System_Info\Reporters\Base" not found in /home/strental/public_html/wp-content/plugins/elementor/core/experiments/experiments-reporter.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/core/experiments/experiments-reporter.php on line 13
+[04-Nov-2025 07:17:31 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\Modules\System_Info\Reporters\Base" not found in /home/strental/public_html/wp-content/plugins/elementor/core/experiments/experiments-reporter.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/core/experiments/experiments-reporter.php on line 13
+[04-Nov-2025 20:00:28 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\Modules\System_Info\Reporters\Base" not found in /home/strental/public_html/wp-content/plugins/elementor/core/experiments/experiments-reporter.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/core/experiments/experiments-reporter.php on line 13
+[04-Nov-2025 20:00:49 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\Modules\System_Info\Reporters\Base" not found in /home/strental/public_html/wp-content/plugins/elementor/core/experiments/experiments-reporter.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/core/experiments/experiments-reporter.php on line 13
+[15-Dec-2025 00:22:55 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\Modules\System_Info\Reporters\Base" not found in /home/strental/public_html/wp-content/plugins/elementor/core/experiments/experiments-reporter.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/core/experiments/experiments-reporter.php on line 13
+[15-Dec-2025 11:36:37 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\Modules\System_Info\Reporters\Base" not found in /home/strental/public_html/wp-content/plugins/elementor/core/experiments/experiments-reporter.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/core/experiments/experiments-reporter.php on line 13

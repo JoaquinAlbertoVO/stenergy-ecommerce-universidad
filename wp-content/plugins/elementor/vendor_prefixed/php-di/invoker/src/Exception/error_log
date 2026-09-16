@@ -1,0 +1,72 @@
+[08-Oct-2025 15:36:28 UTC] PHP Fatal error:  Uncaught Error: Class "ElementorDeps\Invoker\Exception\InvocationException" not found in /home/strental/public_html/wp-content/plugins/elementor/vendor_prefixed/php-di/invoker/src/Exception/NotEnoughParametersException.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/vendor_prefixed/php-di/invoker/src/Exception/NotEnoughParametersException.php on line 9
+[08-Oct-2025 16:06:16 UTC] PHP Fatal error:  Uncaught Error: Class "ElementorDeps\Invoker\Exception\InvocationException" not found in /home/strental/public_html/wp-content/plugins/elementor/vendor_prefixed/php-di/invoker/src/Exception/NotCallableException.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/vendor_prefixed/php-di/invoker/src/Exception/NotCallableException.php on line 9
+[08-Oct-2025 23:08:17 UTC] PHP Fatal error:  Uncaught Error: Class "ElementorDeps\Invoker\Exception\InvocationException" not found in /home/strental/public_html/wp-content/plugins/elementor/vendor_prefixed/php-di/invoker/src/Exception/NotEnoughParametersException.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/vendor_prefixed/php-di/invoker/src/Exception/NotEnoughParametersException.php on line 9
+[08-Oct-2025 23:11:58 UTC] PHP Fatal error:  Uncaught Error: Class "ElementorDeps\Invoker\Exception\InvocationException" not found in /home/strental/public_html/wp-content/plugins/elementor/vendor_prefixed/php-di/invoker/src/Exception/NotCallableException.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/vendor_prefixed/php-di/invoker/src/Exception/NotCallableException.php on line 9
+[08-Oct-2025 23:18:53 UTC] PHP Fatal error:  Uncaught Error: Class "ElementorDeps\Invoker\Exception\InvocationException" not found in /home/strental/public_html/wp-content/plugins/elementor/vendor_prefixed/php-di/invoker/src/Exception/NotEnoughParametersException.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/vendor_prefixed/php-di/invoker/src/Exception/NotEnoughParametersException.php on line 9
+[08-Oct-2025 23:29:47 UTC] PHP Fatal error:  Uncaught Error: Class "ElementorDeps\Invoker\Exception\InvocationException" not found in /home/strental/public_html/wp-content/plugins/elementor/vendor_prefixed/php-di/invoker/src/Exception/NotEnoughParametersException.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/vendor_prefixed/php-di/invoker/src/Exception/NotEnoughParametersException.php on line 9
+[08-Oct-2025 23:30:04 UTC] PHP Fatal error:  Uncaught Error: Class "ElementorDeps\Invoker\Exception\InvocationException" not found in /home/strental/public_html/wp-content/plugins/elementor/vendor_prefixed/php-di/invoker/src/Exception/NotCallableException.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/vendor_prefixed/php-di/invoker/src/Exception/NotCallableException.php on line 9
+[08-Oct-2025 23:35:40 UTC] PHP Fatal error:  Uncaught Error: Class "ElementorDeps\Invoker\Exception\InvocationException" not found in /home/strental/public_html/wp-content/plugins/elementor/vendor_prefixed/php-di/invoker/src/Exception/NotEnoughParametersException.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/vendor_prefixed/php-di/invoker/src/Exception/NotEnoughParametersException.php on line 9
+[08-Oct-2025 23:40:02 UTC] PHP Fatal error:  Uncaught Error: Class "ElementorDeps\Invoker\Exception\InvocationException" not found in /home/strental/public_html/wp-content/plugins/elementor/vendor_prefixed/php-di/invoker/src/Exception/NotCallableException.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/vendor_prefixed/php-di/invoker/src/Exception/NotCallableException.php on line 9
+[04-Nov-2025 07:50:13 UTC] PHP Fatal error:  Uncaught Error: Class "ElementorDeps\Invoker\Exception\InvocationException" not found in /home/strental/public_html/wp-content/plugins/elementor/vendor_prefixed/php-di/invoker/src/Exception/NotEnoughParametersException.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/vendor_prefixed/php-di/invoker/src/Exception/NotEnoughParametersException.php on line 9
+[04-Nov-2025 08:10:31 UTC] PHP Fatal error:  Uncaught Error: Class "ElementorDeps\Invoker\Exception\InvocationException" not found in /home/strental/public_html/wp-content/plugins/elementor/vendor_prefixed/php-di/invoker/src/Exception/NotCallableException.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/vendor_prefixed/php-di/invoker/src/Exception/NotCallableException.php on line 9
+[04-Nov-2025 14:36:40 UTC] PHP Fatal error:  Uncaught Error: Class "ElementorDeps\Invoker\Exception\InvocationException" not found in /home/strental/public_html/wp-content/plugins/elementor/vendor_prefixed/php-di/invoker/src/Exception/NotCallableException.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/vendor_prefixed/php-di/invoker/src/Exception/NotCallableException.php on line 9
+[15-Dec-2025 00:47:20 UTC] PHP Fatal error:  Uncaught Error: Class "ElementorDeps\Invoker\Exception\InvocationException" not found in /home/strental/public_html/wp-content/plugins/elementor/vendor_prefixed/php-di/invoker/src/Exception/NotEnoughParametersException.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/vendor_prefixed/php-di/invoker/src/Exception/NotEnoughParametersException.php on line 9
+[15-Dec-2025 01:36:18 UTC] PHP Fatal error:  Uncaught Error: Class "ElementorDeps\Invoker\Exception\InvocationException" not found in /home/strental/public_html/wp-content/plugins/elementor/vendor_prefixed/php-di/invoker/src/Exception/NotCallableException.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/vendor_prefixed/php-di/invoker/src/Exception/NotCallableException.php on line 9
+[15-Dec-2025 08:08:36 UTC] PHP Fatal error:  Uncaught Error: Class "ElementorDeps\Invoker\Exception\InvocationException" not found in /home/strental/public_html/wp-content/plugins/elementor/vendor_prefixed/php-di/invoker/src/Exception/NotEnoughParametersException.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/vendor_prefixed/php-di/invoker/src/Exception/NotEnoughParametersException.php on line 9
+[15-Dec-2025 08:09:31 UTC] PHP Fatal error:  Uncaught Error: Class "ElementorDeps\Invoker\Exception\InvocationException" not found in /home/strental/public_html/wp-content/plugins/elementor/vendor_prefixed/php-di/invoker/src/Exception/NotCallableException.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/vendor_prefixed/php-di/invoker/src/Exception/NotCallableException.php on line 9
+[15-Dec-2025 08:19:35 UTC] PHP Fatal error:  Uncaught Error: Class "ElementorDeps\Invoker\Exception\InvocationException" not found in /home/strental/public_html/wp-content/plugins/elementor/vendor_prefixed/php-di/invoker/src/Exception/NotEnoughParametersException.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/vendor_prefixed/php-di/invoker/src/Exception/NotEnoughParametersException.php on line 9
+[15-Dec-2025 08:20:03 UTC] PHP Fatal error:  Uncaught Error: Class "ElementorDeps\Invoker\Exception\InvocationException" not found in /home/strental/public_html/wp-content/plugins/elementor/vendor_prefixed/php-di/invoker/src/Exception/NotCallableException.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/vendor_prefixed/php-di/invoker/src/Exception/NotCallableException.php on line 9

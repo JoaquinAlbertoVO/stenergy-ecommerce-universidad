@@ -1,0 +1,108 @@
+[08-Oct-2025 13:39:47 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\Widget_Base" not found in /home/strental/public_html/wp-content/plugins/elementor/modules/floating-buttons/base/widget-floating-bars-base.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/modules/floating-buttons/base/widget-floating-bars-base.php on line 15
+[08-Oct-2025 13:42:02 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\Widget_Base" not found in /home/strental/public_html/wp-content/plugins/elementor/modules/floating-buttons/base/widget-contact-button-base.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/modules/floating-buttons/base/widget-contact-button-base.php on line 17
+[09-Oct-2025 02:52:28 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\Widget_Base" not found in /home/strental/public_html/wp-content/plugins/elementor/modules/floating-buttons/base/widget-floating-bars-base.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/modules/floating-buttons/base/widget-floating-bars-base.php on line 15
+[09-Oct-2025 02:52:29 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\Widget_Base" not found in /home/strental/public_html/wp-content/plugins/elementor/modules/floating-buttons/base/widget-contact-button-base.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/modules/floating-buttons/base/widget-contact-button-base.php on line 17
+[09-Oct-2025 02:54:41 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\Widget_Base" not found in /home/strental/public_html/wp-content/plugins/elementor/modules/floating-buttons/base/widget-contact-button-base.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/modules/floating-buttons/base/widget-contact-button-base.php on line 17
+[09-Oct-2025 02:54:48 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\Widget_Base" not found in /home/strental/public_html/wp-content/plugins/elementor/modules/floating-buttons/base/widget-floating-bars-base.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/modules/floating-buttons/base/widget-floating-bars-base.php on line 15
+[09-Oct-2025 03:28:37 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\Widget_Base" not found in /home/strental/public_html/wp-content/plugins/elementor/modules/floating-buttons/base/widget-floating-bars-base.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/modules/floating-buttons/base/widget-floating-bars-base.php on line 15
+[09-Oct-2025 03:35:50 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\Widget_Base" not found in /home/strental/public_html/wp-content/plugins/elementor/modules/floating-buttons/base/widget-contact-button-base.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/modules/floating-buttons/base/widget-contact-button-base.php on line 17
+[09-Oct-2025 03:40:31 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\Widget_Base" not found in /home/strental/public_html/wp-content/plugins/elementor/modules/floating-buttons/base/widget-floating-bars-base.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/modules/floating-buttons/base/widget-floating-bars-base.php on line 15
+[04-Nov-2025 05:27:19 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\Widget_Base" not found in /home/strental/public_html/wp-content/plugins/elementor/modules/floating-buttons/base/widget-floating-bars-base.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/modules/floating-buttons/base/widget-floating-bars-base.php on line 15
+[04-Nov-2025 05:34:54 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\Widget_Base" not found in /home/strental/public_html/wp-content/plugins/elementor/modules/floating-buttons/base/widget-contact-button-base.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/modules/floating-buttons/base/widget-contact-button-base.php on line 17
+[04-Nov-2025 17:28:18 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\Widget_Base" not found in /home/strental/public_html/wp-content/plugins/elementor/modules/floating-buttons/base/widget-floating-bars-base.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/modules/floating-buttons/base/widget-floating-bars-base.php on line 15
+[04-Nov-2025 17:28:24 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\Widget_Base" not found in /home/strental/public_html/wp-content/plugins/elementor/modules/floating-buttons/base/widget-contact-button-base.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/modules/floating-buttons/base/widget-contact-button-base.php on line 17
+[04-Nov-2025 17:29:10 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\Widget_Base" not found in /home/strental/public_html/wp-content/plugins/elementor/modules/floating-buttons/base/widget-floating-bars-base.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/modules/floating-buttons/base/widget-floating-bars-base.php on line 15
+[04-Nov-2025 17:29:16 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\Widget_Base" not found in /home/strental/public_html/wp-content/plugins/elementor/modules/floating-buttons/base/widget-contact-button-base.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/modules/floating-buttons/base/widget-contact-button-base.php on line 17
+[04-Nov-2025 17:38:17 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\Widget_Base" not found in /home/strental/public_html/wp-content/plugins/elementor/modules/floating-buttons/base/widget-floating-bars-base.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/modules/floating-buttons/base/widget-floating-bars-base.php on line 15
+[04-Nov-2025 17:38:21 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\Widget_Base" not found in /home/strental/public_html/wp-content/plugins/elementor/modules/floating-buttons/base/widget-contact-button-base.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/modules/floating-buttons/base/widget-contact-button-base.php on line 17
+[04-Nov-2025 18:21:35 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\Widget_Base" not found in /home/strental/public_html/wp-content/plugins/elementor/modules/floating-buttons/base/widget-floating-bars-base.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/modules/floating-buttons/base/widget-floating-bars-base.php on line 15
+[04-Nov-2025 18:23:36 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\Widget_Base" not found in /home/strental/public_html/wp-content/plugins/elementor/modules/floating-buttons/base/widget-contact-button-base.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/modules/floating-buttons/base/widget-contact-button-base.php on line 17
+[14-Dec-2025 22:59:26 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\Widget_Base" not found in /home/strental/public_html/wp-content/plugins/elementor/modules/floating-buttons/base/widget-floating-bars-base.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/modules/floating-buttons/base/widget-floating-bars-base.php on line 15
+[14-Dec-2025 23:01:58 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\Widget_Base" not found in /home/strental/public_html/wp-content/plugins/elementor/modules/floating-buttons/base/widget-contact-button-base.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/modules/floating-buttons/base/widget-contact-button-base.php on line 17
+[15-Dec-2025 10:34:15 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\Widget_Base" not found in /home/strental/public_html/wp-content/plugins/elementor/modules/floating-buttons/base/widget-floating-bars-base.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/modules/floating-buttons/base/widget-floating-bars-base.php on line 15
+[15-Dec-2025 10:34:15 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\Widget_Base" not found in /home/strental/public_html/wp-content/plugins/elementor/modules/floating-buttons/base/widget-contact-button-base.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/modules/floating-buttons/base/widget-contact-button-base.php on line 17
+[15-Dec-2025 11:07:03 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\Widget_Base" not found in /home/strental/public_html/wp-content/plugins/elementor/modules/floating-buttons/base/widget-floating-bars-base.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/modules/floating-buttons/base/widget-floating-bars-base.php on line 15
+[15-Dec-2025 11:07:05 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\Widget_Base" not found in /home/strental/public_html/wp-content/plugins/elementor/modules/floating-buttons/base/widget-contact-button-base.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/modules/floating-buttons/base/widget-contact-button-base.php on line 17
+[15-Dec-2025 11:09:13 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\Widget_Base" not found in /home/strental/public_html/wp-content/plugins/elementor/modules/floating-buttons/base/widget-floating-bars-base.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/modules/floating-buttons/base/widget-floating-bars-base.php on line 15
+[15-Dec-2025 11:09:18 UTC] PHP Fatal error:  Uncaught Error: Class "Elementor\Widget_Base" not found in /home/strental/public_html/wp-content/plugins/elementor/modules/floating-buttons/base/widget-contact-button-base.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/strental/public_html/wp-content/plugins/elementor/modules/floating-buttons/base/widget-contact-button-base.php on line 17
