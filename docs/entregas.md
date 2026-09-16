@@ -41,3 +41,16 @@ Pendiente de detallar.
 ## Entrega 5 — Panel de administración de pedidos e inventario
 
 Pendiente de detallar.
+
+## Cómo se genera el contenido de cada entrega (proceso interno)
+
+La landing y el resto del sitio están armados con Elementor dentro de la base
+de datos de WordPress, no como archivos de tema sueltos. Para traer ese
+contenido a este repo:
+
+1. En el WordPress real, ir a **Plugins > All-in-One WP Migration > Export** y
+   exportar un backup completo (`.wpress`).
+2. Extraer de ese backup solo el contenido de las páginas involucradas en la
+   entrega actual (nunca el dump completo de la base de datos).
+3. Revisar que no haya datos comerciales reales (precios, proveedores,
+   contactos de clientes) antes de commitear.
