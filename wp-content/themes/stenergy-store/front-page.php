@@ -32,17 +32,23 @@ $low = function_exists( 'sts_low_stock_ids' ) ? sts_low_stock_ids( 4, 10 ) : arr
 					<a class="button sts-btn--ghost" href="<?php echo esc_url( function_exists( 'sts_whatsapp_url' ) ? sts_whatsapp_url( 'Hola, quisiera cotizar una compra por volumen.' ) : '#' ); ?>" target="_blank" rel="noopener">Cotizar por volumen</a>
 				</p>
 			</div>
-			<div class="sts-hero__card" aria-label="Inventario en vivo">
-				<p class="sts-hero__live"><span class="sts-dot"></span> Inventario en vivo</p>
-				<dl>
-					<div><dt><?php echo (int) $stats['products']; ?></dt><dd>productos publicados</dd></div>
-					<div><dt><?php echo esc_html( number_format_i18n( $stats['units'] ) ); ?></dt><dd>unidades disponibles</dd></div>
-					<div><dt><?php echo (int) $stats['categories']; ?></dt><dd>categorías</dd></div>
-				</dl>
+			<div class="sts-hero__media">
+				<img class="sts-hero__eng" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/img/hero-ingeniero.png' ); ?>" alt="Ingeniero electricista con casco y multímetro" width="458" height="491">
 			</div>
 		</div>
 	</section>
 
+	<section class="sts-band" aria-label="Inventario en vivo">
+		<div class="sts-container sts-band__in">
+			<p class="sts-band__live"><span class="sts-dot"></span> Inventario en vivo</p>
+			<ul class="sts-band__stats">
+				<li><strong><?php echo (int) $stats['products']; ?></strong> productos publicados</li>
+				<li><strong><?php echo esc_html( number_format_i18n( $stats['units'] ) ); ?></strong> unidades disponibles</li>
+				<li><strong><?php echo (int) $stats['categories']; ?></strong> categorías</li>
+			</ul>
+		</div>
+	</section>
+	
 	<?php if ( $cats && ! is_wp_error( $cats ) ) : ?>
 	<section class="sts-section">
 		<div class="sts-container">
