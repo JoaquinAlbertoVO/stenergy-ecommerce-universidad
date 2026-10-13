@@ -8,7 +8,7 @@
  *   STS_ADMIN_USER=usuario STS_ADMIN_PASS=clave node tools/prueba-de-venta.js http://localhost/stenergy-store
  *
  * Opcionales: STS_PRODUCTO (texto de búsqueda, por defecto "guantes") y STS_CANTIDAD (por defecto 3).
- * Escribe las capturas en docs/capturas/prueba-de-venta/ y un resumen en resumen.json.
+ * Escribe las capturas en docs/capturas/prueba-de-venta/ (y resumen.json si se define STS_GUARDAR_RESUMEN).
  */
 const path = require('path');
 const fs = require('fs');
@@ -151,7 +151,7 @@ async function launch() {
 		await aShot('14-admin-correo-confirmacion.png');
 	}
 
-	fs.writeFileSync(path.join(OUT, 'resumen.json'), JSON.stringify(resumen, null, 2));
+	if (process.env.STS_GUARDAR_RESUMEN) fs.writeFileSync(path.join(OUT, 'resumen.json'), JSON.stringify(resumen, null, 2));
 	console.log('\nResumen:', JSON.stringify(resumen, null, 2));
 	await browser.close();
 })().catch((e) => { console.error('Falló:', e.message); process.exit(1); });

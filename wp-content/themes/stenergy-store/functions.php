@@ -67,7 +67,7 @@ add_action(
 add_action(
 	'admin_head',
 	function () {
-		echo '<style>#ehe-admin-cb{display:none !important}</style>';
+		echo '<style>#ehe-admin-cb,.woocommerce-layout__header-tasks-reminder-bar,.woocommerce-task-list__reminder-bar{display:none !important}</style>';
 	}
 );
 
