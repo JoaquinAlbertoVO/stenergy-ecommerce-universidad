@@ -1,0 +1,18 @@
+{
+  "joaquin-villalobos.csv": {
+    "nombre": "Joaquín Alberto Villalobos Oviedo",
+    "rol": "Desarrollo del sitio (WordPress y WooCommerce) y administración del repositorio en GitHub. Catálogo: medición, seguridad y herramientas."
+  },
+  "maykel.csv": {
+    "nombre": "Mayquel Carlos Bernaola Benites",
+    "rol": "Catálogo de equipos de medición y redacción de fichas técnicas."
+  },
+  "alex.csv": {
+    "nombre": "Alex Agustino Lahuanampa Aparco",
+    "rol": "Catálogo de protección eléctrica y herramientas, e investigación de precios de referencia."
+  },
+  "jsolorzano.csv": {
+    "nombre": "Jordy Irving Solorzano Castro",
+    "rol": "Catálogo de iluminación y energía, y control de calidad del catálogo."
+  }
+}
