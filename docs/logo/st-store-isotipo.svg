@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="ST Store">
-  <rect width="64" height="64" rx="14" fill="#FFC421"/>
-  <g fill="#00247E" transform="translate(8 0) skewX(-8)">
-    <path d="M10 15H31V23H19V27H31V50H10V42H22V35H10Z"/>
-    <path d="M33 15H55V23H48V50H40V23H33Z"/>
-  </g>
-  <path d="M41 4L29 20h8l-3 9 12-15h-8z" fill="#00247E" transform="translate(10 -2) scale(.55)" opacity="0"/>
-</svg>

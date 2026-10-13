@@ -7,7 +7,7 @@ $c = function_exists( 'sts_contact' ) ? sts_contact() : array();
 <footer class="sts-footer">
 	<div class="sts-container sts-footer__grid">
 		<div>
-			<p class="sts-footer__brand"><svg viewBox="0 0 64 64" width="34" height="34" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#FFC421"/><g fill="#00247E" transform="translate(8 0) skewX(-8)"><path d="M10 15H31V23H19V27H31V50H10V42H22V35H10Z"/><path d="M33 15H55V23H48V50H40V23H33Z"/></g></svg> <span><strong>ST</strong> STORE</span></p>
+			<p class="sts-footer__brand"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/img/logo-st-store.png' ); ?>" alt="ST Store - Ingeniería eléctrica" width="214" height="70"></p>
 			<p>Tienda en línea de equipos y materiales de ingeniería eléctrica, con inventario en tiempo real y compra completa desde la web.</p>
 			<p class="sts-footer__small">Proyecto del curso E-Business y Analítica Web · Datos de demostración.</p>
 		</div>

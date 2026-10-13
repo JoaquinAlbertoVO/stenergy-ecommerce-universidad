@@ -56,7 +56,7 @@ add_action(
 	'wp_head',
 	function () {
 		if ( ! has_site_icon() ) {
-			echo '<link rel="icon" type="image/svg+xml" href="' . esc_url( get_stylesheet_directory_uri() . '/assets/img/logo-st-store.svg' ) . '">' . "
+			echo '<link rel="icon" type="image/png" href="' . esc_url( get_stylesheet_directory_uri() . '/assets/img/logo-st-store-icono.png' ) . '">' . "
 ";
 		}
 	},
