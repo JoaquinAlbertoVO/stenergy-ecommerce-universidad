@@ -273,7 +273,7 @@ button { cursor: pointer; }
 .sts-footer h3 { color: #fff; font-size: 16px; margin: 0 0 12px; }
 .sts-footer a { color: #fff; text-decoration: none; }
 .sts-footer a:hover { color: var(--sts-accent); }
-.sts-footer__brand { color: #fff; font-size: 22px; letter-spacing: .08em; margin: 0 0 8px; }
+.sts-footer__brand { color: #fff; font-size: 22px; font-style: italic; font-weight: 800; letter-spacing: .06em; margin: 0 0 8px; display: flex; align-items: center; gap: 10px; }
 .sts-footer__brand strong { color: var(--sts-accent); }
 .sts-footer__menu { list-style: none; margin: 0; padding: 0; display: grid; gap: 7px; font-size: 14.5px; }
 .sts-footer__small { font-size: 13px; color: #94a1cf; }

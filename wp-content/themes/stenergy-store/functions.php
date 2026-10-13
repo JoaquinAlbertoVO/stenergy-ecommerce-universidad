@@ -51,6 +51,18 @@ add_action(
 	100
 );
 
+/* Ícono de la pestaña (logo de ST Store). */
+add_action(
+	'wp_head',
+	function () {
+		if ( ! has_site_icon() ) {
+			echo '<link rel="icon" type="image/svg+xml" href="' . esc_url( get_stylesheet_directory_uri() . '/assets/img/logo-st-store.svg' ) . '">' . "
+";
+		}
+	},
+	1
+);
+
 /* Oculta el banner promocional (en inglés) que el tema padre muestra en el escritorio del panel. */
 add_action(
 	'admin_head',

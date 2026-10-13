@@ -13,4 +13,4 @@ la usa como imagen destacada. Si un producto no tiene foto, se muestra una image
 
 **Subir desde GitHub (sin instalar nada):** *Add file → Upload files* dentro de esta carpeta → *Commit changes*.
 
-Las fotos que ya están son referenciales de catálogo (los modelos pueden diferir del producto vendido).
+Las fotos que ya están son referenciales (los modelos pueden diferir del producto vendido); sus fuentes y licencias están en `CREDITOS.md`.

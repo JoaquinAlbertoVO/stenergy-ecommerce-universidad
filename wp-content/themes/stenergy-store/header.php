@@ -36,7 +36,7 @@ $account = function_exists( 'wc_get_page_permalink' ) ? wc_get_page_permalink( '
 		<button class="sts-burger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="sts-nav"><span></span><span></span><span></span></button>
 
 		<a class="sts-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" aria-label="ST Store - Inicio">
-			<svg viewBox="0 0 40 40" width="38" height="38" aria-hidden="true"><rect width="40" height="40" rx="9" fill="#FFC421"/><path d="M22.500 6L10 22h8l-2 12L30 16h-8.500z" fill="#00247E"/></svg>
+			<svg viewBox="0 0 64 64" width="42" height="42" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#FFC421"/><g fill="#00247E" transform="translate(8 0) skewX(-8)"><path d="M10 15H31V23H19V27H31V50H10V42H22V35H10Z"/><path d="M33 15H55V23H48V50H40V23H33Z"/></g></svg>
 			<span class="sts-logo__text"><strong>ST</strong> STORE<small>Ingeniería eléctrica</small></span>
 		</a>
 
