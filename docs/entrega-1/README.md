@@ -1,7 +1,7 @@
 # Entrega 1 — Notas sobre el contenido real de la landing
 
 > **Material histórico.** Esta carpeta conserva lo entregado en la Entrega 1 (landing hecha con Elementor):
-> `homepage.sql`, `productos-woocommerce-ejemplo.csv` y las capturas. **La tienda actual no usa estos archivos**:
+> `homepage.sql` y `productos-woocommerce-ejemplo.csv`. **La tienda actual no usa estos archivos**:
 > la portada ahora es parte del tema propio y el catálogo sale de `sample-data/productos-por-integrante/`.
 > Para levantar el proyecto sigue [`/INSTALL.md`](../../INSTALL.md).
 
@@ -36,8 +36,3 @@ muestran productos reales de WooCommerce de forma dinámica.
 
 Como Elementor Pro es un plugin de pago, su código **no se incluye en este
 repositorio** (ver `../dependencias.md` e `INSTALL.md`).
-
-## Capturas
-
-`capturas/` tiene la landing real (`strental.com.pe`) capturada en
-orden de scroll, como evidencia visual del diseño.
