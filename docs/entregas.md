@@ -1,56 +1,37 @@
 # Plan de entregas
 
-> Borrador inicial. Ajustar fechas y alcance según lo que pida el profesor.
+> Ajustar fechas y alcance según lo que pida el profesor.
 
-## Entrega 1 — Landing page
+## Entrega 1 — Landing page ✅
 
-**Objetivo:** mostrar la página de inicio de la tienda (hero, categorías
-destacadas, propuesta de valor, contacto), adaptada de la landing real de
-ST Energy pero orientada a venta en vez de alquiler.
+Landing en WordPress con Elementor, capturas y catálogo de ejemplo. Material en [`entrega-1/`](entrega-1/README.md).
+La portada actual ya no depende de Elementor Pro: es parte del tema propio (ver Entrega 2).
 
-**Contenido en el repo (avance actual):**
-- ✅ `content/entrega-1-landing/homepage.sql` — contenido real de la página
-  de inicio (texto, estructura de Elementor), extraído y revisado del
-  backup del 2026-09-15.
-- ✅ `content/dependencias.md` — qué tema y plugins usa la landing, y por
-  qué Elementor Pro no se incluye como código (solo se documenta su uso).
-- ✅ `content/entrega-1-landing/screenshots/` — capturas de la landing real
-  en vivo, en orden de scroll.
-- ✅ `content/entrega-1-landing/productos-woocommerce-ejemplo.csv` — 10
-  productos ficticios en modalidad de venta con stock, listos para
-  importar en WooCommerce y reemplazar los productos reales de alquiler
-  que hoy alimentan los carruseles de la landing.
+## Entrega 2 — ≈ 80 % del proyecto (en curso)
 
-**Fuera de alcance:** catálogo completo, carrito, checkout, base de datos de
-productos real.
+Pedido del profesor: flujo de compra **completo** (carrito y todo lo que conlleva), **4 productos por integrante** y,
+si es posible, **chatbot**.
 
-## Entrega 2 — Catálogo de productos con stock
+| Requisito | Resultado |
+|---|---|
+| Flujo de compra completo | ✅ Catálogo → carrito → cupón → checkout (boleta/factura) → pago → pedido → seguimiento. Mapa paso a paso del diagrama UML en [`flujo-de-compra.md`](flujo-de-compra.md) |
+| Manejo de stock | ✅ Stock por producto, descuento al vender, reposición al cancelar, reserva en pedidos pendientes, avisos de "últimas unidades" y "agotado" |
+| 4 productos por integrante (16) | 🔄 Cada integrante edita su CSV en `sample-data/productos-por-integrante/`. Joaquín ✅ · Mayquel y Jordy tienen 3 · Alex falta crear su archivo |
+| Chatbot | ✅ Plugin propio con datos reales de la tienda. [`chatbot.md`](chatbot.md) |
+| Evidencia | ✅ Capturas en [`capturas/entrega-2/`](capturas/entrega-2/) y prueba automática `tools/test_purchase_flow.py` (28 verificaciones) |
 
-Pendiente de detallar: modelo de datos de producto (nombre, categoría,
-descripción, precio de venta, stock disponible), listado y filtro por
-categoría.
+Cómo se verifica rápido: ver el recorrido de demostración en [`flujo-de-compra.md`](flujo-de-compra.md).
 
-## Entrega 3 — Carrito de compras
+## Para llegar al 100 %
 
-Pendiente de detallar.
+- Completar los 16 productos y, si hay tiempo, sus fotos reales (`sample-data/imagenes/<SKU>.jpg`).
+- **Analítica web** (el curso lo pide): conectar Google Analytics 4 con los eventos de e-commerce (`view_item`, `add_to_cart`,
+  `begin_checkout`, `purchase`) y un tablero con embudo de compra; sumar las estadísticas del chatbot.
+- Pasarela de pago real (Niubiz / Culqi / Izipay) y comprobante electrónico autorizado por SUNAT *(solo si el curso lo exige)*.
+- Pruebas con usuarios y ajustes de usabilidad; informe final.
 
-## Entrega 4 — Checkout / pasarela de pago
+## Cómo se genera y se prueba el contenido (proceso interno)
 
-Pendiente de detallar.
-
-## Entrega 5 — Panel de administración de pedidos e inventario
-
-Pendiente de detallar.
-
-## Cómo se genera el contenido de cada entrega (proceso interno)
-
-La landing y el resto del sitio están armados con Elementor dentro de la base
-de datos de WordPress, no como archivos de tema sueltos. Para traer ese
-contenido a este repo:
-
-1. En el WordPress real, ir a **Plugins > All-in-One WP Migration > Export** y
-   exportar un backup completo (`.wpress`).
-2. Extraer de ese backup solo el contenido de las páginas involucradas en la
-   entrega actual (nunca el dump completo de la base de datos).
-3. Revisar que no haya datos comerciales reales (precios, proveedores,
-   contactos de clientes) antes de commitear.
+- El catálogo se carga desde los CSV al abrir el sitio por primera vez y con el botón *Re-sincronizar* del panel.
+- `python tools/test_purchase_flow.py <url>` recorre una compra completa y valida las reglas de negocio.
+- `node tools/capture-screenshots.js <url>` regenera todas las capturas. Ver [`../tools/README.md`](../tools/README.md).

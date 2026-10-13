@@ -1,61 +1,77 @@
-# E-commerce de Productos de Ingeniería Eléctrica (Proyecto Universitario)
+# ST Store · e-commerce de ingeniería eléctrica con stock real
 
-Proyecto de curso: tienda en línea (venta con stock) de productos de ingeniería
-eléctrica, construida en WordPress + WooCommerce. Está inspirado en el sitio
-real de alquiler de **ST Energy** (`strental.com.pe`), pero adaptado al
-requisito del curso: en vez de alquiler, este proyecto maneja **venta con
-inventario/stock**.
+Proyecto del curso **E-Business y Analítica Web** (UPN). Tienda en línea hecha en **WordPress + WooCommerce** que vende
+equipos y materiales de ingeniería eléctrica (medición, seguridad, herramientas, iluminación y energía) con
+**inventario en tiempo real**: el stock se muestra al cliente, se descuenta al confirmar la compra y se repone si el
+pedido se cancela.
 
-Este es un proyecto WordPress completo y clonable: incluye el núcleo de
-WordPress, el tema y los plugins gratuitos usados por la landing. Para
-levantarlo en tu propio localhost, sigue [`INSTALL.md`](INSTALL.md).
+> Es un proyecto clonable: incluye el núcleo de WordPress, el tema, los plugins y los datos de la demo.
+> Para verlo en tu PC sigue **[INSTALL.md](INSTALL.md)** (clonar, crear una base de datos vacía y abrir la URL; no hay que importar nada).
 
-## Estado actual
+## Estado: Entrega 2 (≈ 80 %)
 
-✅ **Entrega 1 — Landing page** (esta entrega)
-🔲 Entrega 2 — Catálogo de productos con stock
-🔲 Entrega 3 — Carrito de compras
-🔲 Entrega 4 — Checkout / pasarela de pago
-🔲 Entrega 5 — Panel de administración de pedidos e inventario
+| Área | Estado |
+|---|---|
+| Landing y catálogo con stock por producto | ✅ |
+| Carrito, cupones y cálculo de envío (Lima / provincias / recojo) | ✅ |
+| Checkout con **boleta (DNI) o factura (RUC)**, IGV incluido | ✅ |
+| Pagos: tarjeta (pasarela simulada), Yape/Plin, transferencia, contra entrega | ✅ (pasarela real: pendiente) |
+| Pedido → *En preparación → Enviado (con seguimiento) → Entregado*, correos al cliente | ✅ |
+| Panel de administración: pedidos, inventario, correos simulados | ✅ |
+| **Chatbot** con stock, precios, envíos, pagos y estado de pedido | ✅ |
+| 16 productos (4 por integrante) | 🔄 en curso — ver [productos por integrante](sample-data/productos-por-integrante/README.md) |
+| Analítica web (Google Analytics 4 / eventos de e-commerce) | 🔲 pendiente |
+| Pasarela de pago real y comprobante electrónico SUNAT | 🔲 fuera de alcance del curso |
 
-Detalle de alcance de cada entrega en [`docs/entregas.md`](docs/entregas.md).
+Detalle por entrega: [`docs/entregas.md`](docs/entregas.md) · Flujo de compra vs. diagrama UML: [`docs/flujo-de-compra.md`](docs/flujo-de-compra.md) · Chatbot: [`docs/chatbot.md`](docs/chatbot.md)
 
-## Vista previa de la landing (Entrega 1)
+## Así se ve
 
-![Hero](content/entrega-1-landing/screenshots/01-hero.png)
-![Carrusel de productos](content/entrega-1-landing/screenshots/02-carrusel-productos-top.png)
-![Línea de equipos y productos](content/entrega-1-landing/screenshots/03-linea-equipos-y-productos.png)
-![Productos y contadores](content/entrega-1-landing/screenshots/04-productos-y-contadores.png)
-![Por qué elegirnos](content/entrega-1-landing/screenshots/05-porque-elegirnos.png)
-![Footer y contacto](content/entrega-1-landing/screenshots/06-footer-contacto.png)
+![Portada](docs/capturas/entrega-2/01-portada.png)
 
-## Estructura
+| Catálogo con stock | Chatbot |
+|---|---|
+| ![Catálogo](docs/capturas/entrega-2/02-catalogo.png) | ![Chatbot](docs/capturas/entrega-2/04-chatbot.png) |
+
+| Carrito con cupón | Checkout con factura (RUC) |
+|---|---|
+| ![Carrito](docs/capturas/entrega-2/05-carrito.png) | ![Checkout](docs/capturas/entrega-2/06-checkout-factura.png) |
+
+| Pedido recibido | Panel: inventario y pedidos |
+|---|---|
+| ![Pedido recibido](docs/capturas/entrega-2/07-pedido-recibido.png) | ![Panel](docs/capturas/entrega-2/08-admin-escritorio.png) |
+
+Más capturas (ficha de producto, pedidos, correos simulados, versión móvil) en [`docs/capturas/entrega-2/`](docs/capturas/entrega-2/).
+
+## Equipo
+
+| Integrante | Aporte |
+|---|---|
+| Joaquín Alberto Villalobos Oviedo | Desarrollo del sitio (tema, flujo de compra, chatbot), repositorio en GitHub; catálogo de medición, seguridad y herramientas |
+| Mayquel Carlos Bernaola Benites | Catálogo de equipos de medición y fichas técnicas |
+| Alex Agustino Lahuanampa Aparco | Catálogo de protección eléctrica y herramientas; precios de referencia |
+| Jordy Irving Solorzano Castro | Catálogo de iluminación y energía; control de calidad del catálogo |
+
+Cada integrante sube **su propio archivo CSV** de productos con sus propios commits (pestaña *Commits* o *Contributors* de GitHub).
+
+## Cómo está organizado
 
 ```text
-stenergy-ecommerce-universidad/
-├── INSTALL.md                 # cómo clonar y levantar el sitio en tu localhost
-├── wp-admin/, wp-includes/, wp-*.php   # núcleo de WordPress (oficial, GPL)
-├── wp-config-sample.php       # copiar a wp-config.php con tus datos de BD
+├── INSTALL.md                         ← cómo levantarlo en localhost
+├── wp-admin/, wp-includes/, wp-*.php  ← núcleo de WordPress (oficial, GPL)
 ├── wp-content/
-│   ├── themes/hello-elementor/
-│   └── plugins/                # Elementor, WooCommerce, Essential Addons, etc. (todos gratuitos)
-├── sample-data/
-│   ├── homepage.sql            # contenido real de la home (texto + Elementor)
-│   └── productos-woocommerce-ejemplo.csv  # catálogo de ejemplo con stock
-├── docs/
-│   └── entregas.md             # alcance de cada entrega
-└── content/
-    ├── dependencias.md         # detalle de plugins y por qué Elementor Pro no está incluido
-    └── entrega-1-landing/
-        └── screenshots/        # capturas de la landing real en vivo
+│   ├── mu-plugins/stenergy-store-*    ← núcleo de la tienda: configuración Perú, catálogo desde CSV, checkout RUC/DNI, pagos, estados
+│   ├── plugins/stenergy-chatbot/      ← chatbot propio
+│   ├── plugins/woocommerce/ …         ← plugins gratuitos
+│   ├── themes/stenergy-store/         ← tema hijo (diseño propio)
+│   └── languages/                     ← traducción al español
+├── sample-data/productos-por-integrante/  ← un CSV por integrante (fuente del catálogo)
+├── docs/                              ← entregas, diagramas, capturas, chatbot, dependencias
+└── tools/                             ← prueba automática del flujo de compra y generador de capturas
 ```
 
 ## Qué NO va en este repositorio
 
-- **Elementor Pro**: es un plugin de pago, su licencia no permite
-  redistribuir el código fuente. Ver [`INSTALL.md`](INSTALL.md) para el
-  detalle de qué secciones de la landing lo necesitan.
-- **Datos comerciales reales** de ST Energy (proveedores, precios de
-  alquiler reales, clientes, pedidos). El catálogo de ejemplo usa
-  productos y precios ficticios, en modalidad de venta (no alquiler).
-- **`wp-config.php`** ni ninguna credencial de base de datos real.
+- **Elementor Pro** y cualquier plugin de pago (licencia no redistribuible). La Entrega 1 se hizo con Elementor; ver [`docs/entrega-1`](docs/entrega-1/README.md).
+- **Datos reales de una empresa** (proveedores, precios de alquiler, clientes, pedidos). Todo el catálogo es de ejemplo, de **venta** con stock.
+- **`wp-config.php`** ni credenciales. Cada quien genera el suyo con el asistente de WordPress.

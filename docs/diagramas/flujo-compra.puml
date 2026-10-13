@@ -1,0 +1,98 @@
+@startuml
+skinparam activity {
+  BackgroundColor<<Cliente>> #E8F0FE
+  BorderColor<<Cliente>> #1A56DB
+  BackgroundColor<<Sistema>> #E6F4EA
+  BorderColor<<Sistema>> #1E7E34
+  BackgroundColor<<Almacen>> #FFF3E0
+  BorderColor<<Almacen>> #C2680A
+  BackgroundColor<<Error>> #FEE2E2
+  BorderColor<<Error>> #B91C1C
+  BackgroundColor<<Extra>> #F3E8FF
+  BorderColor<<Extra>> #7C3AED
+}
+skinparam swimlaneTitleBackgroundColor #DDDDDD
+skinparam defaultFontSize 12
+
+|Cliente|
+start
+:Ingresar a la tienda virtual;<<Cliente>>
+repeat
+  :Buscar o filtrar productos por categoría;<<Cliente>>
+  :Ver ficha del producto (precio, stock, especificaciones);<<Cliente>>
+  |Sistema|
+  if (¿Hay stock disponible?) then (no)
+    :Mostrar "Agotado";<<Error>>
+  else (sí)
+    |Cliente|
+    :Agregar producto al carrito;<<Cliente>>
+    |Sistema|
+    :Actualizar contador y subtotal del carrito;<<Sistema>>
+  endif
+  |Cliente|
+  :Revisar carrito y ajustar cantidades;<<Cliente>>
+repeat while (¿Seguir comprando?) is (sí) not (no)
+
+:Iniciar checkout;<<Cliente>>
+
+if (¿Tiene cuenta registrada?) then (sí)
+  :Iniciar sesión;<<Cliente>>
+else (no)
+  if (¿Desea registrarse?) then (sí)
+    :Crear cuenta nueva;<<Cliente>>
+  else (no)
+    :Continuar como invitado;<<Cliente>>
+  endif
+endif
+
+:Ingresar / confirmar dirección de envío y datos de facturación;<<Cliente>>
+|Sistema|
+:Calcular costo de envío según dirección;<<Sistema>>
+|Cliente|
+if (¿Tiene cupón de descuento?) then (sí)
+  :Ingresar código de cupón;<<Extra>>
+  |Sistema|
+  :Validar y aplicar descuento;<<Extra>>
+  |Cliente|
+else (no)
+endif
+:Elegir método de pago (tarjeta, Yape/Plin, transferencia);<<Cliente>>
+:Revisar resumen del pedido (subtotal, envío, descuento, total);<<Cliente>>
+:Aceptar términos y condiciones;<<Cliente>>
+
+repeat
+  :Confirmar pedido;<<Cliente>>
+  |Sistema|
+  :Redirigir a pasarela de pago;<<Sistema>>
+  :Procesar pago;<<Sistema>>
+  if (¿Pago aprobado?) then (no)
+    :Mostrar error de pago;<<Error>>
+    |Cliente|
+  else (sí)
+  endif
+repeat while (¿Pago aprobado?) is (no) not (sí)
+
+|Sistema|
+:Revalidar stock disponible (evitar sobreventa);<<Sistema>>
+:Reducir stock del producto (venta definitiva);<<Sistema>>
+:Generar número de orden y factura electrónica;<<Sistema>>
+:Enviar correo de confirmación del pedido;<<Sistema>>
+:Notificar al almacén sobre el nuevo pedido;<<Sistema>>
+
+|Almacén|
+:Preparar pedido (picking/packing);<<Almacen>>
+:Generar guía de remisión / etiqueta de envío;<<Almacen>>
+:Coordinar despacho con transportista;<<Almacen>>
+
+|Sistema|
+:Actualizar estado del pedido a "Enviado";<<Sistema>>
+:Enviar número de seguimiento al cliente;<<Sistema>>
+
+|Cliente|
+:Recibe el producto;<<Cliente>>
+|Sistema|
+:Actualizar estado del pedido a "Entregado";<<Sistema>>
+|Cliente|
+:Calificar / reseñar el producto (opcional);<<Extra>>
+stop
+@enduml
