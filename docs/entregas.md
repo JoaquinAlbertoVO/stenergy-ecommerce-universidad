@@ -24,7 +24,7 @@ Cómo se verifica rápido: ver el recorrido de demostración en [`flujo-de-compr
 
 ## Para llegar al 100 %
 
-- Completar los 16 productos y, si hay tiempo, sus fotos reales (`sample-data/imagenes/<SKU>.jpg`).
+- Completar los 16 productos y sus fotos (`sample-data/imagenes/<SKU>.jpg`). Ya hay fotos para 5 productos; faltan las de los otros.
 - **Analítica web** (el curso lo pide): conectar Google Analytics 4 con los eventos de e-commerce (`view_item`, `add_to_cart`,
   `begin_checkout`, `purchase`) y un tablero con embudo de compra; sumar las estadísticas del chatbot.
 - Pasarela de pago real (Niubiz / Culqi / Izipay) y comprobante electrónico autorizado por SUNAT *(solo si el curso lo exige)*.

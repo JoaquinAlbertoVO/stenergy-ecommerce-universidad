@@ -123,25 +123,25 @@ add_action(
 function sts_cat_style( $category ) {
 	$key = strtolower( remove_accents( (string) $category ) );
 	if ( false !== strpos( $key, 'medicion' ) ) {
-		return array( 'gauge', '#0F5B8E', '#0B3C5D' );
+		return array( 'gauge', '#00247E', '#0B3BA6' );
 	}
 	if ( false !== strpos( $key, 'seguridad' ) || false !== strpos( $key, 'epp' ) || false !== strpos( $key, 'proteccion' ) ) {
-		return array( 'shield', '#C2610C', '#7C2D12' );
+		return array( 'shield', '#00247E', '#0B3BA6' );
 	}
 	if ( false !== strpos( $key, 'herramienta' ) ) {
-		return array( 'gear', '#475569', '#1E293B' );
+		return array( 'gear', '#00247E', '#0B3BA6' );
 	}
 	if ( false !== strpos( $key, 'iluminacion' ) || false !== strpos( $key, 'energia' ) ) {
-		return array( 'bolt', '#B7791F', '#78350F' );
+		return array( 'bolt', '#00247E', '#0B3BA6' );
 	}
-	return array( 'box', '#0F5B8E', '#0B3C5D' );
+	return array( 'box', '#00247E', '#0B3BA6' );
 }
 
-function sts_icon_svg( $icon ) {
-	$s = 'fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"';
+function sts_icon_svg( $icon, $stroke = '#fff' ) {
+	$s = 'fill="none" stroke="' . $stroke . '" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"';
 	switch ( $icon ) {
 		case 'gauge':
-			return '<path ' . $s . ' d="M4 17a8 8 0 1 1 16 0"/><path ' . $s . ' d="M12 17l4-5"/><circle cx="12" cy="17" r="1.2" fill="#fff"/><path ' . $s . ' d="M6.3 10.3l1 .8M12 6.5v1.3M17.7 10.3l-1 .8"/>';
+			return '<path ' . $s . ' d="M4 17a8 8 0 1 1 16 0"/><path ' . $s . ' d="M12 17l4-5"/><circle cx="12" cy="17" r="1.2" fill="' . $stroke . '"/><path ' . $s . ' d="M6.3 10.3l1 .8M12 6.5v1.3M17.7 10.3l-1 .8"/>';
 		case 'shield':
 			return '<path ' . $s . ' d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.500-7-10V6z"/><path ' . $s . ' d="M9 12l2 2 4-4"/>';
 		case 'gear':
@@ -182,13 +182,13 @@ function sts_product_svg( $product ) {
 		$text .= sprintf( '<text x="300" y="%d" text-anchor="middle" font-size="34" font-weight="700" fill="#fff">%s</text>', 395 + $i * 44, htmlspecialchars( $line, ENT_XML1 | ENT_QUOTES, 'UTF-8' ) );
 	}
 
-	$svg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" font-family="Segoe UI, Arial, sans-serif">'
-		. '<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="' . $c1 . '"/><stop offset="1" stop-color="' . $c2 . '"/></linearGradient></defs>'
-		. '<rect width="600" height="600" fill="url(#g)"/>'
-		. '<circle cx="300" cy="215" r="92" fill="#ffffff" fill-opacity=".14"/>'
-		. '<g transform="translate(228 143) scale(6)">' . sts_icon_svg( $icon ) . '</g>'
+	$text = str_replace( 'fill="#fff"', 'fill="#00247E"', $text );
+	$svg  = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" font-family="Segoe UI, Arial, sans-serif">'
+		. '<rect width="600" height="600" fill="#F4F6FB"/>'
+		. '<circle cx="300" cy="205" r="92" fill="#00247E"/>'
+		. '<g transform="translate(228 133) scale(6)">' . sts_icon_svg( $icon, '#FFC421' ) . '</g>'
 		. $text
-		. '<text x="300" y="568" text-anchor="middle" font-size="18" fill="#fff" fill-opacity=".7">Imagen referencial · ST Store</text>'
+		. '<text x="300" y="568" text-anchor="middle" font-size="18" fill="#6B7894">Imagen referencial</text>'
 		. '</svg>';
 
 	return 'data:image/svg+xml;base64,' . base64_encode( $svg );

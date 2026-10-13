@@ -53,7 +53,7 @@ $low = function_exists( 'sts_low_stock_ids' ) ? sts_low_stock_ids( 4, 10 ) : arr
 					list( $icon, $c1, $c2 ) = sts_cat_style( $cat->name );
 					?>
 					<a class="sts-cat" href="<?php echo esc_url( get_term_link( $cat ) ); ?>" style="--c1:<?php echo esc_attr( $c1 ); ?>;--c2:<?php echo esc_attr( $c2 ); ?>">
-						<svg viewBox="0 0 24 24" width="44" height="44" aria-hidden="true"><?php echo sts_icon_svg( $icon ); // phpcs:ignore ?></svg>
+						<svg viewBox="0 0 24 24" width="44" height="44" aria-hidden="true"><?php echo sts_icon_svg( $icon, '#FFC421' ); // phpcs:ignore ?></svg>
 						<span class="sts-cat__name"><?php echo esc_html( $cat->name ); ?></span>
 						<span class="sts-cat__count"><?php echo (int) $cat->count; ?> producto<?php echo 1 === (int) $cat->count ? '' : 's'; ?></span>
 					</a>
@@ -64,10 +64,10 @@ $low = function_exists( 'sts_low_stock_ids' ) ? sts_low_stock_ids( 4, 10 ) : arr
 	<?php endif; ?>
 
 	<section class="sts-section sts-section--alt">
-		<div class="sts-container">
-			<h2 class="sts-title">Últimos ingresos</h2>
+		<div class="sts-container sts-panel">
+			<h2 class="sts-title sts-title--pill">Últimos ingresos</h2>
 			<?php echo do_shortcode( '[products limit="8" columns="4" orderby="date" order="DESC"]' ); // phpcs:ignore ?>
-			<p class="sts-more"><a href="<?php echo esc_url( $shop ); ?>">Ver todo el catálogo →</a></p>
+			<p class="sts-more"><a class="button sts-btn--accent" href="<?php echo esc_url( $shop ); ?>">Ver todo el catálogo</a></p>
 		</div>
 	</section>
 
