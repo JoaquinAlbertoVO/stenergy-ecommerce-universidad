@@ -1,59 +1,59 @@
-# Productos por integrante (3 c/u)
+# Productos por integrante (4 c/u)
 
-El profesor pidió 3 productos por cada integrante del equipo (4 personas
-= 12 productos), y que cada quien tenga su propio commit en GitHub.
+El profesor pidió **4 productos por cada integrante** (4 personas = 16 productos) y que cada
+quien tenga sus propios commits en GitHub. Cada integrante tiene **su propio archivo CSV**: esos
+archivos son la fuente real del catálogo de la tienda (no es un ejemplo suelto).
 
-## Cómo participar
+| Archivo | Integrante |
+|---|---|
+| `joaquin-villalobos.csv` | Joaquín Villalobos |
+| `maykel.csv` | Mayquel Bernaola |
+| `jsolorzano.csv` | Jordy Solorzano |
+| `alex.csv` | Alex Lahuanampa |
 
-1. **Cada integrante necesita una cuenta de GitHub** y acceso de
-   colaborador a este repositorio (Joaquín los invita — les llega un
-   correo/notificación para aceptar la invitación).
+La meta es **4 filas por archivo**. El avance en vivo (cuántos productos aportó cada uno) se ve en la
+página *Nosotros* de la tienda.
 
-2. Clona el repositorio en tu PC:
+> El nombre del archivo debe coincidir con el que figura en [`_integrantes.json`](_integrantes.json);
+> si usas otro nombre, cámbialo también ahí.
 
-   ```bash
-   git clone https://github.com/JoaquinAlbertoVO/stenergy-ecommerce-universidad.git
-   cd stenergy-ecommerce-universidad
-   ```
+## Cómo agregar tus productos (sin instalar nada)
 
-3. Copia `_plantilla.csv` a un archivo con tu nombre, por ejemplo:
+1. Entra a GitHub, a la carpeta `sample-data/productos-por-integrante/`.
+2. Abre tu archivo (o `_plantilla.csv` si aún no tienes) → ícono del lápiz.
+3. Agrega o corrige filas respetando las columnas. Un producto por fila.
+4. **Commit changes** → "Commit directly to the main branch". Ese commit queda a tu nombre.
 
-   ```bash
-   cp sample-data/productos-por-integrante/_plantilla.csv sample-data/productos-por-integrante/juan-perez.csv
-   ```
+## Reglas del formato
 
-4. Completa tus **3 productos** en ese archivo (electrónica/eléctrica
-   industrial, modalidad de **venta con stock**, no alquiler). Sigue el
-   mismo formato de columnas — puedes abrir el CSV con Excel o Google
-   Sheets si prefieres.
+| Columna | Qué poner |
+|---|---|
+| `Type` | siempre `simple` |
+| `SKU` | único en toda la tienda. Usa un prefijo tuyo (`MAY-001`, `JSO-001`...) |
+| `Name`, `Short description`, `Description` | texto en español, con datos técnicos reales |
+| `Published` / `Is featured?` | `1` o `0` |
+| `Stock` | **cantidad en unidades** (número entero). Con esto la tienda controla el inventario: baja al vender y se muestra "Agotado" en 0 |
+| `Regular price` | precio de **venta** en soles, con IGV incluido (ej. `189.90`; también acepta `1,850.00`) |
+| `Categories` | una o varias separadas por coma. Reutiliza los nombres existentes: *Equipos de medición*, *Equipos de seguridad (EPP)*, *Herramientas industriales*, *Iluminación y energía* |
+| `Tags` | palabras clave separadas por coma (ayudan al buscador y al chatbot) |
 
-5. Configura tu identidad de Git (una sola vez, con tu propio nombre y
-   correo, para que el commit quede a tu nombre):
+Opcionales: `Sale price` (precio en oferta) y `Low stock amount` (umbral de "últimas unidades", por defecto 5).
 
-   ```bash
-   git config user.name "Tu Nombre"
-   git config user.email "tu-correo@ejemplo.com"
-   ```
+Si guardas el CSV desde Excel en español, funciona igual (acepta `;` y la codificación de Windows).
+**No es alquiler**: son productos de venta con stock y precio de venta.
 
-6. Sube tu archivo con tu propio commit:
+## Imágenes (opcional)
 
-   ```bash
-   git add sample-data/productos-por-integrante/tu-nombre.csv
-   git commit -m "Agrega 3 productos: <categoría de tus productos>"
-   git push origin main
-   ```
+Si un producto no tiene foto, la tienda genera una imagen referencial con su nombre y categoría.
+Para poner la foto real, sube `sample-data/imagenes/<SKU>.jpg` (o `.png` / `.webp`), por ejemplo
+`sample-data/imagenes/MAY-001.jpg`.
 
-Cada archivo queda separado por persona a propósito, para que el profesor
-vea en GitHub (pestaña **Commits** o **Insights > Contributors**) quién
-aportó qué.
+## Ver tus productos en la tienda local
 
-## Categorías sugeridas (para no repetir productos entre integrantes)
+```bash
+git pull
+```
 
-- Equipos de medición (multímetros, cámaras termográficas, luxómetros...)
-- Equipos de protección personal / seguridad eléctrica
-- Herramientas industriales (roscadoras, compresoras, taladros...)
-- Iluminación y energía (reflectores LED, paneles solares...)
-
-Cada integrante puede tomar una categoría distinta, o mezclar — lo
-importante es que sean 3 productos reales de ingeniería eléctrica,
-con precio de venta y stock (no precio de alquiler).
+Luego, en el panel de WordPress: **ST Store → Estado → "Re-sincronizar catálogo desde los CSV"**.
+Actualiza por SKU: no duplica productos ni borra pedidos. Si algo está mal escrito (sin precio,
+sin SKU...) ahí mismo aparece un aviso con el archivo y la línea.
