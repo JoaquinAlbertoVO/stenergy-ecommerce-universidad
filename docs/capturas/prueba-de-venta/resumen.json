@@ -1,0 +1,9 @@
+{
+  "producto": "Guantes Dieléctricos Clase 2 hasta 17 kV",
+  "stock_catalogo_antes": "30 unidades en stock",
+  "stock_ficha_antes": "30 unidades en stock",
+  "pedido": "135",
+  "url_pedido": "http://localhost/stenergy-store/finalizar-compra/order-received/135/?key=wc_order_cy6QQFHieyE2R",
+  "stock_ficha_despues": "27 unidades en stock",
+  "stock_catalogo_despues": "27 unidades en stock"
+}

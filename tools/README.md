@@ -28,3 +28,7 @@ STS_ADMIN_USER=usuario STS_ADMIN_PASS=clave node tools/capture-screenshots.js ht
 ```
 
 Conviene correrlo en una instalación recién hecha para que el stock y los pedidos se vean limpios.
+
+## prueba-de-venta.js
+
+Hace una compra completa (catálogo → carrito → cupón → boleta → tarjeta → pedido) y captura el stock antes y después, el chatbot y el panel. Guía: [`docs/prueba-de-venta.md`](../docs/prueba-de-venta.md).
