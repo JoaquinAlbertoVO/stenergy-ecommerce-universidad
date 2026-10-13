@@ -1,10 +1,9 @@
 # Entrega 1 — Notas sobre el contenido real de la landing
 
-El contenido y catálogo de ejemplo ahora viven en
-[`/sample-data`](../../sample-data/) (`homepage.sql` y
-`productos-woocommerce-ejemplo.csv`), junto con la guía de instalación en
-[`/INSTALL.md`](../../INSTALL.md). Esta carpeta guarda solo el detalle y
-las capturas.
+> **Material histórico.** Esta carpeta conserva lo entregado en la Entrega 1 (landing hecha con Elementor):
+> `homepage.sql`, `productos-woocommerce-ejemplo.csv` y las capturas. **La tienda actual no usa estos archivos**:
+> la portada ahora es parte del tema propio y el catálogo sale de `sample-data/productos-por-integrante/`.
+> Para levantar el proyecto sigue [`/INSTALL.md`](../../INSTALL.md).
 
 ## Sobre `homepage.sql`
 
@@ -40,5 +39,5 @@ repositorio** (ver `../dependencias.md` e `INSTALL.md`).
 
 ## Capturas
 
-`screenshots/` tiene la landing real (`strental.com.pe`) capturada en
+`capturas/` tiene la landing real (`strental.com.pe`) capturada en
 orden de scroll, como evidencia visual del diseño.

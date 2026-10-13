@@ -8,6 +8,8 @@ Thumbs.db
 # Credenciales y configuración de WordPress (NUNCA subir esto) - cada quien crea el suyo desde wp-config-sample.php
 wp-config.php
 .htpasswd
+# WordPress lo genera solo al guardar los enlaces permanentes
+.htaccess
 
 # Backups completos (.wpress, .zip, .tar.gz) - pesan mucho y pueden traer datos reales
 *.wpress
@@ -17,6 +19,7 @@ wp-config.php
 # Volcados de base de datos: solo se permite el contenido ya extraído/revisado en sample-data/
 *.sql
 !sample-data/*.sql
+!docs/entrega-1/*.sql
 
 # Cachés y temporales de WordPress
 wp-content/cache/
@@ -26,3 +29,11 @@ wp-content/debug.log
 
 # Plugin de pago excluido por licencia (ver INSTALL.md)
 wp-content/plugins/pro-elements/
+
+# Traducciones: solo se versionan los archivos compilados (.mo/.php/.json), no los .po
+wp-content/languages/**/*.po
+wp-content/languages/*.po
+
+# Herramientas de desarrollo
+node_modules/
+package-lock.json
