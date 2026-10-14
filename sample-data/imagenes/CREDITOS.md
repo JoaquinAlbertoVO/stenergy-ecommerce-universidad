@@ -14,5 +14,6 @@ Uso académico, sin fines de lucro. Las fotos de Wikimedia Commons se recortaron
 | MAY-001 | Multímetro Fluke 87 | [Fluke 87 multimeter front.jpg](https://commons.wikimedia.org/wiki/File:Fluke_87_multimeter_front.jpg) | Alex P. Kok | CC BY-SA 4.0 |
 | MAY-002 | Pinza amperimétrica | Foto de catálogo (referencial) | - | - |
 | MAY-003 | Cámara termográfica | Foto de catálogo (referencial) | - | - |
+| MAY-004 | Megóhmetro Fluke 1507 | Foto de catálogo (referencial) | - | - |
 
 Al agregar una foto nueva, anota aquí su fuente, autor y licencia.
