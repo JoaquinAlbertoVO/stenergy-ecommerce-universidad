@@ -20,10 +20,10 @@ pedido se cancela.
 | Panel de administración: pedidos, inventario, correos simulados | ✅ |
 | **Chatbot** con stock, precios, envíos, pagos y estado de pedido | ✅ |
 | 16 productos (4 por integrante) | 🔄 en curso — ver [productos por integrante](sample-data/productos-por-integrante/README.md) |
-| Analítica web (Google Analytics 4 / eventos de e-commerce) | 🔲 pendiente |
+| Analítica web: **Google Analytics 4** con eventos de e-commerce (vista → carrito → checkout → compra), chatbot y WhatsApp | ✅ integrado (falta el ID de medición de la propiedad GA4) |
 | Pasarela de pago real y comprobante electrónico SUNAT | 🔲 fuera de alcance del curso |
 
-Detalle por entrega: [`docs/entregas.md`](docs/entregas.md) · Flujo de compra vs. diagrama UML: [`docs/flujo-de-compra.md`](docs/flujo-de-compra.md) · Chatbot: [`docs/chatbot.md`](docs/chatbot.md)
+Detalle por entrega: [`docs/entregas.md`](docs/entregas.md) · Flujo de compra vs. diagrama UML: [`docs/flujo-de-compra.md`](docs/flujo-de-compra.md) · Chatbot: [`docs/chatbot.md`](docs/chatbot.md) · Analítica: [`docs/google-analytics-4.md`](docs/google-analytics-4.md)
 
 ## Así se ve
 

@@ -38,10 +38,12 @@ add_action(
 		require_once STS_CORE_DIR . '/includes/class-sts-checkout.php';
 		require_once STS_CORE_DIR . '/includes/class-sts-order-status.php';
 		require_once STS_CORE_DIR . '/includes/class-sts-team.php';
+		require_once STS_CORE_DIR . '/includes/class-sts-analytics.php';
 
 		STS_Checkout::init();
 		STS_Order_Status::init();
 		STS_Team::init();
+		STS_Analytics::init();
 
 		add_filter(
 			'woocommerce_payment_gateways',

@@ -14,6 +14,7 @@ class STS_Admin {
 		add_action( 'admin_post_sts_resync', array( __CLASS__, 'handle_resync' ) );
 		add_action( 'admin_post_sts_reapply', array( __CLASS__, 'handle_reapply' ) );
 		add_action( 'admin_post_sts_save_contact', array( __CLASS__, 'handle_save_contact' ) );
+		add_action( 'admin_post_sts_save_ga4', array( __CLASS__, 'handle_save_ga4' ) );
 		add_action( 'wp_dashboard_setup', array( __CLASS__, 'dashboard_widget' ) );
 		add_action( 'admin_notices', array( __CLASS__, 'notices' ) );
 	}
@@ -86,6 +87,27 @@ class STS_Admin {
 		self::back( 'ajustes' );
 	}
 
+	public static function handle_save_ga4() {
+		if ( ! self::cap() || ! check_admin_referer( 'sts_save_ga4' ) ) {
+			wp_die( 'No autorizado.' );
+		}
+		$id = isset( $_POST['measurement_id'] ) ? strtoupper( trim( sanitize_text_field( wp_unslash( $_POST['measurement_id'] ) ) ) ) : '';
+		if ( '' !== $id && ! preg_match( '/^G-[A-Z0-9]{4,20}$/', $id ) ) {
+			self::flash( 'El ID de medición debe tener la forma G-XXXXXXXXXX. No se guardó.' );
+			self::back( 'analytics' );
+		}
+		update_option(
+			'sts_ga4',
+			array(
+				'measurement_id' => $id,
+				'debug'          => empty( $_POST['debug'] ) ? 0 : 1,
+				'exclude_admins' => empty( $_POST['exclude_admins'] ) ? 0 : 1,
+			)
+		);
+		self::flash( $id ? 'Google Analytics 4 activado con ' . $id . '.' : 'Google Analytics 4 desactivado (sin ID de medición).' );
+		self::back( 'analytics' );
+	}
+
 	public static function page() {
 		if ( ! self::cap() ) {
 			return;
@@ -94,7 +116,8 @@ class STS_Admin {
 		$tabs = array(
 			'estado'  => 'Estado',
 			'ajustes' => 'Ajustes de contacto',
-			'correos' => 'Correos simulados',
+			'correos'   => 'Correos simulados',
+			'analytics' => 'Google Analytics 4',
 		);
 		echo '<div class="wrap"><h1>ST Store</h1><nav class="nav-tab-wrapper">';
 		foreach ( $tabs as $slug => $label ) {
@@ -110,6 +133,8 @@ class STS_Admin {
 			self::tab_ajustes();
 		} elseif ( 'correos' === $tab ) {
 			self::tab_correos();
+		} elseif ( 'analytics' === $tab ) {
+			self::tab_analytics();
 		} else {
 			self::tab_estado();
 		}
@@ -169,6 +194,63 @@ class STS_Admin {
 		echo '<input type="hidden" name="action" value="sts_save_contact">';
 		submit_button( 'Guardar' );
 		echo '</form>';
+	}
+
+	private static function tab_analytics() {
+		if ( ! class_exists( 'STS_Analytics' ) ) {
+			echo '<p>Activa WooCommerce para usar la medición de comercio electrónico.</p>';
+			return;
+		}
+		$s        = STS_Analytics::settings();
+		$constant = defined( 'STS_GA4_ID' ) && STS_GA4_ID;
+		$active   = STS_Analytics::measurement_id();
+		echo '<h2>Google Analytics 4</h2>';
+		printf(
+			'<p>Estado: %s</p>',
+			$active ? '<strong style="color:#1e7e34">Midiendo con ' . esc_html( $active ) . '</strong>' : '<strong style="color:#b45309">Desactivado</strong> (falta el ID de medición)'
+		); // phpcs:ignore
+		echo '<p>El ID se obtiene en <a href="https://analytics.google.com/" target="_blank" rel="noopener">analytics.google.com</a> &rarr; '
+			. 'Administrar &rarr; Flujos de datos &rarr; Web &rarr; <em>ID de medición</em> (empieza con <code>G-</code>).</p>';
+		echo '<form method="post" action="' . esc_url( admin_url( 'admin-post.php' ) ) . '"><table class="form-table">';
+		printf(
+			'<tr><th><label for="measurement_id">ID de medición</label></th><td><input class="regular-text code" id="measurement_id" name="measurement_id" placeholder="G-XXXXXXXXXX" value="%s" %s>%s</td></tr>',
+			esc_attr( $s['measurement_id'] ),
+			$constant ? 'disabled' : '',
+			$constant ? '<p class="description">Definido en wp-config.php con <code>STS_GA4_ID</code>.</p>' : '<p class="description">Déjalo vacío para desactivar la medición.</p>'
+		); // phpcs:ignore
+		printf(
+			'<tr><th>Modo depuración</th><td><label><input type="checkbox" name="debug" value="1" %s> Enviar los eventos con <code>debug_mode</code> para verlos al instante en Administrar &rarr; DebugView</label></td></tr>',
+			checked( $s['debug'], 1, false )
+		);
+		printf(
+			'<tr><th>Administradores</th><td><label><input type="checkbox" name="exclude_admins" value="1" %s> No medir las visitas de usuarios administradores (para no mezclar sus pruebas con los datos de clientes)</label></td></tr>',
+			checked( $s['exclude_admins'], 1, false )
+		);
+		echo '</table>';
+		wp_nonce_field( 'sts_save_ga4' );
+		echo '<input type="hidden" name="action" value="sts_save_ga4">';
+		submit_button( 'Guardar' );
+		echo '</form>';
+
+		$events = array(
+			'view_item_list'    => 'Se ve un listado de productos (inicio, tienda, categoría, búsqueda, relacionados).',
+			'select_item'       => 'Clic en un producto de un listado.',
+			'view_item'         => 'Se abre la ficha de un producto.',
+			'add_to_cart'       => 'Se agrega un producto al carrito (catálogo o ficha).',
+			'remove_from_cart'  => 'Se quita un producto en la página del carrito.',
+			'view_cart'         => 'Se abre el carrito.',
+			'begin_checkout'    => 'Se abre "Finalizar compra".',
+			'add_shipping_info' => 'Se confirma el método de envío al pulsar "Realizar el pedido".',
+			'add_payment_info'  => 'Se confirma el método de pago al pulsar "Realizar el pedido".',
+			'purchase'          => 'Pedido recibido (una sola vez por pedido): número, total, IGV, envío, cupón y productos.',
+			'chatbot_open'      => 'Evento propio: se abre el asistente virtual.',
+			'whatsapp_click'    => 'Evento propio: clic en un enlace de WhatsApp (encabezado, pie, contenido o chatbot).',
+		);
+		echo '<h3>Eventos que se envían</h3><table class="widefat striped" style="max-width:860px"><tbody>';
+		foreach ( $events as $name => $desc ) {
+			printf( '<tr><td><code>%s</code></td><td>%s</td></tr>', esc_html( $name ), esc_html( $desc ) );
+		}
+		echo '</tbody></table>';
 	}
 
 	private static function tab_correos() {
