@@ -16,10 +16,11 @@ wp-config.php
 *.zip
 *.tar.gz
 
-# Volcados de base de datos: solo se permite el contenido ya extraído/revisado en sample-data/
+# Volcados de base de datos: solo se permite el contenido ya revisado (sample-data/, database/)
 *.sql
 !sample-data/*.sql
 !docs/entrega-1/*.sql
+!database/*.sql
 
 # Cachés y temporales de WordPress
 wp-content/cache/

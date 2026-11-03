@@ -2,7 +2,8 @@
 
 Este repositorio es un proyecto WordPress completo (núcleo, tema, plugins y datos de la demo).
 **No necesitas importar ninguna base de datos**: después de instalar WordPress, la tienda se
-configura sola la primera vez que se abre.
+configura sola la primera vez que se abre. Si prefieres partir de nuestros mismos datos, el volcado completo
+está en [`database/stenergy_store.sql`](database/README.md).
 
 **Requisitos:** XAMPP con Apache y MySQL (PHP 8.0 o superior) y Git. No hace falta internet.
 
