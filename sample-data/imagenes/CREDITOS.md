@@ -11,6 +11,7 @@ Uso académico, sin fines de lucro. Las fotos de Wikimedia Commons se recortaron
 | JSO-001 | Reflector LED | [LED floodlights.jpg](https://commons.wikimedia.org/wiki/File:LED_floodlights.jpg) | Santeri Viinamäki | CC BY-SA 4.0 |
 | JSO-002 | Panel solar | [Monocrystalline silicon solar panel.jpg](https://commons.wikimedia.org/wiki/File:Monocrystalline_silicon_solar_panel.jpg) | ArticCynda | CC0 |
 | JSO-003 | UPS | [UPS Image.JPG](https://commons.wikimedia.org/wiki/File:UPS_Image.JPG) | Zafijan | Public domain |
+| JSO-004 | Inversor solar | [Growatt MOD 4000TL3-X inverter.jpg](https://commons.wikimedia.org/wiki/File:Growatt_MOD_4000TL3-X_inverter.jpg) (recortada y sin la etiqueta del instalador) | Zátonyi Sándor (ifj.) Fizped | CC BY 4.0 |
 | MAY-001 | Multímetro Fluke 87 | [Fluke 87 multimeter front.jpg](https://commons.wikimedia.org/wiki/File:Fluke_87_multimeter_front.jpg) | Alex P. Kok | CC BY-SA 4.0 |
 | MAY-002 | Pinza amperimétrica | Foto de catálogo (referencial) | - | - |
 | MAY-003 | Cámara termográfica | Foto de catálogo (referencial) | - | - |
