@@ -179,6 +179,8 @@ class STS_Setup {
 		$p['about']    = self::upsert_page( 'nosotros', 'Nosotros', self::text_about() );
 		$p['contact']  = self::upsert_page( 'contacto', 'Contacto', '[sts_contacto]' );
 		$p['home']     = self::upsert_page( 'inicio', 'Inicio', '' );
+		// Se crea una sola vez: el equipo redacta el texto en el panel y re-aplicar la configuración no lo pisa.
+		$p['cookies']  = self::ensure_page( 'politica-de-cookies', 'Política de cookies', self::text_cookies() );
 
 		update_option( 'woocommerce_terms_page_id', $p['terms'] );
 		update_option( 'wp_page_for_privacy_policy', $p['privacy'] );
@@ -201,7 +203,21 @@ class STS_Setup {
 		return '<p><em>Texto de ejemplo del proyecto universitario ST Store.</em></p>'
 			. '<h2>Datos que recopilamos</h2><p>Nombre, documento (DNI/RUC), correo, teléfono y dirección de entrega, únicamente para procesar tu pedido y emitir tu comprobante.</p>'
 			. '<h2>Uso de los datos</h2><p>No vendemos ni compartimos tus datos con terceros ajenos al despacho del pedido. Puedes solicitar la eliminación de tu cuenta escribiendo a ' . esc_html( sts_contact( 'email' ) ) . '.</p>'
-			. '<h2>Chatbot</h2><p>El asistente virtual no almacena el contenido de tus mensajes; solo registra de forma anónima el tipo de consulta para mejorar sus respuestas.</p>';
+			. '<h2>Chatbot</h2><p>El asistente virtual no almacena el contenido de tus mensajes; solo registra de forma anónima el tipo de consulta para mejorar sus respuestas.</p>'
+			. '<h2>Cookies y analítica</h2><p>Solo si lo aceptas, usamos Google Analytics 4 (Google) para medir el uso de la tienda. Detalle en la <a href="' . esc_url( sts_page_url( 'politica-de-cookies' ) ) . '">Política de cookies</a>.</p>';
+	}
+
+	private static function text_cookies() {
+		return '<!-- Pendiente (equipo): redactar qué son las cookies, base legal (Ley 29733), cómo desactivarlas desde el navegador y contacto. -->'
+			. '<p>Estas son las cookies que usa ST Store. Las de analítica solo se activan si las aceptas en el aviso de cookies.</p>'
+			. '[sts_tabla_cookies]'
+			. '[sts_preferencias_cookies]';
+	}
+
+	/** Crea la página si no existe; si ya existe no toca su contenido. */
+	private static function ensure_page( $slug, $title, $content ) {
+		$page = get_page_by_path( $slug );
+		return $page ? $page->ID : self::upsert_page( $slug, $title, $content );
 	}
 
 	private static function text_shipping() {
@@ -449,7 +465,7 @@ class STS_Setup {
 		}
 
 		$help = self::fresh_menu( 'Menú de ayuda' );
-		foreach ( array( 'shipping' => 'Envíos y devoluciones', 'terms' => 'Términos y condiciones', 'privacy' => 'Política de privacidad', 'account' => 'Mi cuenta', 'contact' => 'Contacto' ) as $key => $label ) {
+		foreach ( array( 'shipping' => 'Envíos y devoluciones', 'terms' => 'Términos y condiciones', 'privacy' => 'Política de privacidad', 'cookies' => 'Política de cookies', 'account' => 'Mi cuenta', 'contact' => 'Contacto' ) as $key => $label ) {
 			wp_update_nav_menu_item(
 				$help,
 				0,

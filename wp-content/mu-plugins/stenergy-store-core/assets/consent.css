@@ -1,0 +1,61 @@
+/* ST Store: aviso de cookies (colores de la marca: azul #00247e, amarillo #ffc421). */
+.sts-consent[hidden] { display: none; }
+.sts-consent {
+	position: fixed;
+	left: 16px;
+	right: 16px;
+	bottom: 16px;
+	z-index: 100000;
+	display: flex;
+	justify-content: center;
+	pointer-events: none;
+}
+.sts-consent__box {
+	pointer-events: auto;
+	width: 100%;
+	max-width: 760px;
+	background: #fff;
+	color: #1b2240;
+	border-top: 4px solid #ffc421;
+	border-radius: 10px;
+	box-shadow: 0 10px 40px rgba(0, 20, 80, .25);
+	padding: 18px 20px;
+	font-size: 15px;
+	line-height: 1.5;
+}
+.sts-consent__title { margin: 0 0 6px; font-weight: 700; font-size: 17px; color: #00247e; }
+.sts-consent__text { margin: 0 0 12px; }
+.sts-consent__text a { color: #00247e; text-decoration: underline; }
+.sts-consent__prefs { margin: 0 0 12px; padding: 10px 12px; background: #f3f5fb; border-radius: 8px; }
+.sts-consent__prefs[hidden] { display: none; }
+.sts-consent__opt { display: flex; gap: 10px; align-items: flex-start; margin: 6px 0; cursor: pointer; }
+.sts-consent__opt input { margin-top: 4px; width: 18px; height: 18px; accent-color: #00247e; }
+.sts-consent__actions { display: flex; flex-wrap: wrap; gap: 8px; justify-content: flex-end; }
+.sts-consent__btn {
+	min-height: 42px;
+	padding: 8px 18px;
+	border: 2px solid #00247e;
+	border-radius: 6px;
+	background: #00247e;
+	color: #fff;
+	font: inherit;
+	font-weight: 600;
+	cursor: pointer;
+}
+.sts-consent__btn[hidden] { display: none; }
+.sts-consent__btn--ghost { background: #fff; color: #00247e; }
+.sts-consent__btn:hover { background: #001a5c; border-color: #001a5c; color: #fff; }
+.sts-consent__btn:focus-visible, .sts-consent__opt input:focus-visible { outline: 3px solid #ffc421; outline-offset: 2px; }
+@media (max-width: 560px) {
+	.sts-consent { left: 8px; right: 8px; bottom: 8px; }
+	.sts-consent__actions .sts-consent__btn { flex: 1 1 45%; }
+}
+
+/* Tabla de la página Política de cookies. */
+.sts-cookie-table { width: 100%; border-collapse: collapse; margin: 1em 0; font-size: 14px; }
+.sts-cookie-table th, .sts-cookie-table td { border: 1px solid #d9deea; padding: 8px 10px; text-align: left; vertical-align: top; }
+.sts-cookie-table th { background: #00247e; color: #fff; }
+.sts-cookie-table code { white-space: normal; word-break: break-word; }
+@media (max-width: 640px) {
+	.sts-cookie-table { display: block; overflow-x: auto; }
+}

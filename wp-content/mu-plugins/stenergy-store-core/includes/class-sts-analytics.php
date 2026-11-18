@@ -218,13 +218,24 @@ class STS_Analytics {
 			$config['debug_mode'] = true;
 		}
 		?>
-<!-- Google Analytics 4 (ST Store) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=<?php echo esc_attr( $id ); ?>"></script>
+<!-- Google Analytics 4 (ST Store): gtag.js se descarga solo con consentimiento de analítica (ver class-sts-consent.php).
+     Los eventos de antes quedan en dataLayer y se envían al cargarse. -->
 <script>
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', <?php echo wp_json_encode( $id ); ?>, <?php echo wp_json_encode( $config ); ?>);
+(function () {
+	function load() {
+		if (window.stsGtagLoaded) { return; }
+		window.stsGtagLoaded = true;
+		var s = document.createElement('script');
+		s.async = true;
+		s.src = <?php echo wp_json_encode( 'https://www.googletagmanager.com/gtag/js?id=' . rawurlencode( $id ) ); ?>;
+		document.head.appendChild(s);
+	}
+	if (window.stsConsent) { window.stsConsent.whenAnalytics(load); } else { load(); }
+})();
 </script>
 		<?php
 	}

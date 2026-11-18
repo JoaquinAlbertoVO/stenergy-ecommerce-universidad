@@ -48,7 +48,18 @@ Los pedidos con pago rechazado no se cuentan como compra.
 - Para usar `chatbot_open` y `whatsapp_click` en los informes, márcalos como **eventos clave** en *Administrar → Eventos*.
   El parámetro `link_location` se registra como dimensión personalizada en *Administrar → Definiciones personalizadas*.
 
-## Si se publica en un servidor real
+## Consentimiento de cookies (Consent Mode v2)
 
-Hay que agregar un aviso de cookies y de privacidad que explique el uso de Google Analytics (Ley 29733 de Protección de Datos Personales).
-Para el localhost del curso no hace falta.
+La tienda muestra un aviso de cookies (`includes/class-sts-consent.php`, `assets/consent.js`, `assets/consent.css`):
+
+- Antes de elegir, Consent Mode queda en `denied` y **gtag.js no se descarga**: no se crean `_ga` ni `_ga_*`.
+  Los eventos de esa página quedan en `dataLayer` y se envían si el visitante acepta.
+- WooCommerce no crea las cookies `sbjs_*` (origen de pedidos) hasta que se acepta (filtro `wc_order_attribution_allow_tracking`).
+- Aceptar, Rechazar o Configurar (casilla de Analítica). La elección se guarda 180 días en `sts_cookie_consent`
+  (`v1.a1` acepta, `v1.a0` rechaza). Al rechazar se borran las cookies `_ga*` y `sbjs_*`.
+- El enlace **Preferencias de cookies** del footer (o cualquier enlace a `#preferencias-cookies`) vuelve a abrir el aviso.
+- Página **Política de cookies** (`/politica-de-cookies/`) con la tabla de cookies (`[sts_tabla_cookies]`) y el botón de preferencias
+  (`[sts_preferencias_cookies]`). Se crea una sola vez: el texto lo redacta el equipo en el panel y re-aplicar la configuración no lo pisa.
+
+Para probar GA4 en DebugView hay que **aceptar** las cookies primero.
+Para volver a ver el aviso: borrar la cookie `sts_cookie_consent` o usar el enlace del footer.
