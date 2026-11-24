@@ -519,5 +519,8 @@ class STS_Setup {
 		require_once ABSPATH . 'wp-admin/includes/misc.php';
 		$wp_rewrite->set_permalink_structure( '/%postname%/' );
 		flush_rewrite_rules( true );
+		// En esta misma petición WooCommerce registró los productos antes de conocer la página "Tienda", así que la
+		// regla del catálogo (/tienda/) queda mal. Se vuelven a generar en la siguiente visita (ver sts_flush_rewrite).
+		update_option( 'sts_flush_rewrite', 1, false );
 	}
 }

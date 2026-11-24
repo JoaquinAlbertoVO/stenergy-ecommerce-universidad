@@ -64,6 +64,23 @@ add_action(
 );
 
 /**
+ * Regenera los enlaces permanentes una vez, en la petición siguiente a la configuración automática,
+ * cuando WooCommerce ya conoce la página "Tienda" (si no, /tienda/ se muestra vacía).
+ */
+add_action(
+	'init',
+	function () {
+		if ( get_option( 'sts_flush_rewrite' ) ) {
+			delete_option( 'sts_flush_rewrite' );
+			require_once ABSPATH . 'wp-admin/includes/file.php';
+			require_once ABSPATH . 'wp-admin/includes/misc.php';
+			flush_rewrite_rules( true );
+		}
+	},
+	99
+);
+
+/**
  * Primera visita tras instalar WordPress: deja la demo lista sin pasos manuales.
  * Solo corre en peticiones web (no en WP-CLI, AJAX, REST ni cron).
  */
