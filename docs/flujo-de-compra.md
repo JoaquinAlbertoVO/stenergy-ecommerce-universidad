@@ -1,7 +1,11 @@
 # Flujo de compra: del diagrama UML a lo que ya está implementado
 
-Diagrama UML de actividades (3 carriles: Cliente, Sistema, Almacén): [`diagramas/flujo-compra.puml`](diagramas/flujo-compra.puml)
-(se renderiza pegándolo en planttext.com o plantuml.com).
+Diagrama UML de actividades (3 carriles: Cliente, Sistema, Almacén):
+
+![Flujo de compra](diagramas/flujo-compra.png)
+
+Fuentes: [`flujo-compra.drawio`](diagramas/flujo-compra.drawio) (draw.io) y [`flujo-compra.puml`](diagramas/flujo-compra.puml)
+(PlantUML, se renderiza pegándolo en planttext.com o plantuml.com).
 
 La tabla muestra, paso por paso, dónde vive cada acción en la tienda y cómo comprobarla.
 

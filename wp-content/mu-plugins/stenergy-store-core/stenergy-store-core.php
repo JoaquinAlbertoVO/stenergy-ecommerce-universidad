@@ -15,7 +15,7 @@ define( 'STS_CORE_VERSION', '1.0.0' );
 define( 'STS_CORE_DIR', __DIR__ );
 define( 'STS_CORE_URL', WPMU_PLUGIN_URL . '/stenergy-store-core' );
 define( 'STS_DATA_DIR', trailingslashit( ABSPATH ) . 'sample-data/' );
-define( 'STS_SETUP_VERSION', 5 ); // 5: página Política de cookies.
+define( 'STS_SETUP_VERSION', 6 ); // 5: página Política de cookies. 6: texto completo de esa página.
 
 require_once STS_CORE_DIR . '/includes/helpers.php';
 require_once STS_CORE_DIR . '/includes/class-sts-mail-log.php';

@@ -4,6 +4,10 @@ Uso académico, sin fines de lucro. Las fotos de Wikimedia Commons se recortaron
 
 | SKU | Producto | Fuente | Autor | Licencia |
 |---|---|---|---|---|
+| ALE-001 | Detector de secuencia de fases | Foto de catálogo (referencial) | - | - |
+| ALE-002 | Telurómetro digital | Foto de catálogo (referencial) | - | - |
+| ALE-003 | Taladro percutor inalámbrico | Foto de catálogo (referencial) | - | - |
+| ALE-004 | Lámpara de emergencia LED | Foto de catálogo (referencial) | - | - |
 | JOA-001 | Analizador de redes | Foto de catálogo (referencial) | - | - |
 | JOA-002 | Detector de tensión | Foto de catálogo (referencial) | - | - |
 | JOA-003 | Generador inverter | [Powerhorse Inverter Generator.jpg](https://commons.wikimedia.org/wiki/File:Powerhorse_Inverter_Generator.jpg) | TaurusEmerald | CC BY-SA 4.0 |

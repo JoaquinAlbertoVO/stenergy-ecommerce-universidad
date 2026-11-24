@@ -8,19 +8,20 @@ pedido se cancela.
 > Es un proyecto clonable: incluye el núcleo de WordPress, el tema, los plugins y los datos de la demo.
 > Para verlo en tu PC sigue **[INSTALL.md](INSTALL.md)** (clonar, crear una base de datos vacía y abrir la URL; no hay que importar nada).
 
-## Estado: Entrega 2 (≈ 80 %)
+## Estado: proyecto completo (100 %)
 
 | Área | Estado |
 |---|---|
 | Landing y catálogo con stock por producto | ✅ |
 | Carrito, cupones y cálculo de envío (Lima / provincias / recojo) | ✅ |
 | Checkout con **boleta (DNI) o factura (RUC)**, IGV incluido | ✅ |
-| Pagos: tarjeta (pasarela simulada), Yape/Plin, transferencia, contra entrega | ✅ (pasarela real: pendiente) |
+| Pagos: tarjeta (pasarela simulada), Yape/Plin, transferencia, contra entrega | ✅ |
 | Pedido → *En preparación → Enviado (con seguimiento) → Entregado*, correos al cliente | ✅ |
 | Panel de administración: pedidos, inventario, correos simulados | ✅ |
 | **Chatbot** con stock, precios, envíos, pagos y estado de pedido | ✅ |
-| 16 productos (4 por integrante) | 🔄 en curso — ver [productos por integrante](sample-data/productos-por-integrante/README.md) |
-| Analítica web: **Google Analytics 4** con eventos de e-commerce (vista → carrito → checkout → compra), chatbot y WhatsApp | ✅ integrado (falta el ID de medición de la propiedad GA4) |
+| 16 productos (4 por integrante) con foto y stock | ✅ ver [productos por integrante](sample-data/productos-por-integrante/README.md) |
+| Analítica web: **Google Analytics 4** con eventos de e-commerce (vista → carrito → checkout → compra), chatbot y WhatsApp | ✅ propiedad `G-KRY8R9ENKH` |
+| Aviso de cookies con **Consent Mode v2**, Política de cookies y de privacidad (Ley 29733) | ✅ |
 | Pasarela de pago real y comprobante electrónico SUNAT | 🔲 fuera de alcance del curso |
 
 Detalle por entrega: [`docs/entregas.md`](docs/entregas.md) · Flujo de compra vs. diagrama UML: [`docs/flujo-de-compra.md`](docs/flujo-de-compra.md) · Chatbot: [`docs/chatbot.md`](docs/chatbot.md) · Analítica: [`docs/google-analytics-4.md`](docs/google-analytics-4.md)

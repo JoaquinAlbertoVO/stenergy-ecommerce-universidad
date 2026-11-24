@@ -7,7 +7,7 @@
 Landing en WordPress con Elementor, capturas y catálogo de ejemplo. Material en [`entrega-1/`](entrega-1/README.md).
 La portada actual ya no depende de Elementor Pro: es parte del tema propio (ver Entrega 2).
 
-## Entrega 2 — ≈ 80 % del proyecto (en curso)
+## Entrega 2 — ≈ 80 % del proyecto ✅
 
 Pedido del profesor: flujo de compra **completo** (carrito y todo lo que conlleva), **4 productos por integrante** y,
 si es posible, **chatbot**.
@@ -16,19 +16,24 @@ si es posible, **chatbot**.
 |---|---|
 | Flujo de compra completo | ✅ Catálogo → carrito → cupón → checkout (boleta/factura) → pago → pedido → seguimiento. Mapa paso a paso del diagrama UML en [`flujo-de-compra.md`](flujo-de-compra.md) |
 | Manejo de stock | ✅ Stock por producto, descuento al vender, reposición al cancelar, reserva en pedidos pendientes, avisos de "últimas unidades" y "agotado" |
-| 4 productos por integrante (16) | 🔄 Cada integrante edita su CSV en `sample-data/productos-por-integrante/`. Joaquín ✅ · Mayquel y Jordy tienen 3 · Alex falta crear su archivo |
+| 4 productos por integrante (16) | ✅ Joaquín, Mayquel, Jordy y Alex: 4 productos cada uno con foto (CSV en `sample-data/productos-por-integrante/`, créditos de fotos en `sample-data/imagenes/CREDITOS.md`) |
 | Chatbot | ✅ Plugin propio con datos reales de la tienda. [`chatbot.md`](chatbot.md) |
 | Evidencia | ✅ Capturas en [`capturas/entrega-2/`](capturas/entrega-2/) y prueba automática `tools/test_purchase_flow.py` (28 verificaciones) |
 
 Cómo se verifica rápido: ver el recorrido de demostración en [`flujo-de-compra.md`](flujo-de-compra.md).
 
-## Para llegar al 100 %
+## Entrega final — 100 % ✅
 
-- Completar los 16 productos y sus fotos (`sample-data/imagenes/<SKU>.jpg`). Los 10 productos actuales ya tienen foto (créditos en `sample-data/imagenes/CREDITOS.md`); faltan las de los productos nuevos de Mayquel, Jordy y Alex.
-- **Analítica web** (el curso lo pide): conectar Google Analytics 4 con los eventos de e-commerce (`view_item`, `add_to_cart`,
-  `begin_checkout`, `purchase`) y un tablero con embudo de compra; sumar las estadísticas del chatbot.
-- Pasarela de pago real (Niubiz / Culqi / Izipay) y comprobante electrónico autorizado por SUNAT *(solo si el curso lo exige)*.
-- Pruebas con usuarios y ajustes de usabilidad; informe final.
+| Requisito | Resultado |
+|---|---|
+| 16 productos con foto y stock | ✅ 4 por integrante |
+| Analítica web | ✅ Google Analytics 4 con eventos de e-commerce (`view_item_list` → `view_item` → `add_to_cart` → `begin_checkout` → `add_payment_info` → `purchase`), `chatbot_open` y `whatsapp_click`. Guía para armar el embudo en GA4: [`google-analytics-4.md`](google-analytics-4.md) |
+| Privacidad y cookies | ✅ Aviso de cookies con Consent Mode v2, páginas Política de cookies y Política de privacidad |
+| Diagrama del flujo de compra | ✅ [`diagramas/flujo-compra.png`](diagramas/flujo-compra.png) (editable en draw.io: [`flujo-compra.drawio`](diagramas/flujo-compra.drawio)) |
+| Evidencia | ✅ Capturas actualizadas en [`capturas/entrega-2/`](capturas/entrega-2/) y prueba automática (28 verificaciones) |
+
+Fuera de alcance del curso: pasarela de pago real (Niubiz / Culqi / Izipay) y comprobante electrónico SUNAT.
+La tarjeta usa una pasarela simulada y Yape/Plin se valida a mano desde el panel.
 
 ## Cómo se genera y se prueba el contenido (proceso interno)
 

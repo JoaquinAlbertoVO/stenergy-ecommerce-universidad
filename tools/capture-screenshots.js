@@ -34,6 +34,8 @@ async function launch() {
 (async () => {
 	const browser = await launch();
 	const ctx = await browser.newContext({ viewport: { width: 1366, height: 820 }, locale: 'es-PE' });
+	// Elección de cookies ya hecha (analítica rechazada): el aviso no tapa las capturas y no se envían visitas a GA4.
+	await ctx.addCookies([{ name: 'sts_cookie_consent', value: 'v1.a0', url: BASE + '/' }]);
 	const page = await ctx.newPage();
 	const shot = async (name, opts) => {
 		// El encabezado fijo (sticky) se repite a mitad de página en capturas completas: se fija arriba solo para la captura.
@@ -128,6 +130,7 @@ async function launch() {
 
 	// 9. Móvil
 	const mobile = await browser.newContext({ viewport: { width: 390, height: 844 }, isMobile: true, deviceScaleFactor: 2, locale: 'es-PE' });
+	await mobile.addCookies([{ name: 'sts_cookie_consent', value: 'v1.a0', url: BASE + '/' }]);
 	const m = await mobile.newPage();
 	await m.goto(BASE + '/', { waitUntil: 'load' });
 	await m.waitForLoadState('networkidle').catch(() => {});

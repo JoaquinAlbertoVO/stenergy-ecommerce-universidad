@@ -33,6 +33,8 @@ async function launch() {
 (async () => {
 	const browser = await launch();
 	const ctx = await browser.newContext({ viewport: { width: 1366, height: 820 }, locale: 'es-PE' });
+	// Elección de cookies ya hecha (analítica rechazada): el aviso no tapa los botones y no se envían visitas a GA4.
+	await ctx.addCookies([{ name: 'sts_cookie_consent', value: 'v1.a0', url: BASE + '/' }]);
 	const page = await ctx.newPage();
 	const idle = () => page.waitForLoadState('networkidle').catch(() => {});
 	const go = async (url) => { await page.goto(url.startsWith('http') ? url : BASE + url, { waitUntil: 'load' }); await idle(); };

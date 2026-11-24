@@ -208,16 +208,29 @@ class STS_Setup {
 	}
 
 	private static function text_cookies() {
-		return '<!-- Pendiente (equipo): redactar qué son las cookies, base legal (Ley 29733), cómo desactivarlas desde el navegador y contacto. -->'
-			. '<p>Estas son las cookies que usa ST Store. Las de analítica solo se activan si las aceptas en el aviso de cookies.</p>'
+		return '<p><em>Texto de ejemplo del proyecto universitario ST Store.</em></p>'
+			. '<h2>¿Qué son las cookies?</h2><p>Son pequeños archivos que el sitio guarda en tu navegador para recordar información entre una página y otra, por ejemplo los productos de tu carrito.</p>'
+			. '<h2>Tipos de cookies que usamos</h2><ul>'
+			. '<li><strong>Necesarias:</strong> hacen funcionar el carrito, el inicio de sesión y la seguridad del sitio. No requieren tu consentimiento porque sin ellas no se puede comprar.</li>'
+			. '<li><strong>Analítica:</strong> Google Analytics 4 y el registro del origen de la visita de WooCommerce. Nos ayudan a saber qué productos se ven y en qué paso de la compra se abandona. <strong>Solo se activan si las aceptas.</strong></li></ul>'
+			. '<p>No usamos cookies de publicidad ni de redes sociales.</p>'
+			. '<h2>Lista de cookies</h2>'
 			. '[sts_tabla_cookies]'
-			. '[sts_preferencias_cookies]';
+			. '<h2>Cómo cambiar tu elección</h2><p>Puedes aceptar o rechazar la analítica cuando quieras con el botón de abajo o con el enlace <em>Preferencias de cookies</em> al pie de cada página. Si la rechazas, borramos las cookies de analítica de tu navegador. También puedes borrar o bloquear cookies desde la configuración de tu navegador; si bloqueas las necesarias, el carrito no funcionará.</p>'
+			. '[sts_preferencias_cookies]'
+			. '<h2>Tus datos personales</h2><p>El tratamiento de datos se rige por la Ley N.° 29733, Ley de Protección de Datos Personales del Perú. Más detalle en la <a href="' . esc_url( sts_page_url( 'politica-de-privacidad' ) ) . '">Política de privacidad</a>. Para consultas escribe a ' . esc_html( sts_contact( 'email' ) ) . '.</p>';
 	}
 
-	/** Crea la página si no existe; si ya existe no toca su contenido. */
+	/**
+	 * Crea la página si no existe. Si ya existe no toca su contenido (puede haberse editado en el panel),
+	 * salvo que siga siendo el borrador inicial de la versión 5.
+	 */
 	private static function ensure_page( $slug, $title, $content ) {
 		$page = get_page_by_path( $slug );
-		return $page ? $page->ID : self::upsert_page( $slug, $title, $content );
+		if ( $page && false === strpos( $page->post_content, 'Pendiente (equipo)' ) ) {
+			return $page->ID;
+		}
+		return self::upsert_page( $slug, $title, $content );
 	}
 
 	private static function text_shipping() {
