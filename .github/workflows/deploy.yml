@@ -74,6 +74,22 @@ jobs:
           set cmd:fail-exit yes
           EOF
 
+      - name: Probar la conexión SFTP
+        if: steps.check.outputs.ready == 'true'
+        run: |
+          echo "IP del runner: $(curl -s https://api.ipify.org || echo '?')"
+          printf 'pwd\nbye\n' > prueba.sftp
+          if timeout 60 sftp -o BatchMode=yes -o ConnectTimeout=20 -o IdentitiesOnly=yes -i ~/.ssh/deploy_key \
+               -o UserKnownHostsFile=$HOME/.ssh/known_hosts -b prueba.sftp "${SSH_USER}@${SSH_HOST}" 2> sftp.err; then
+            echo "Conexión SFTP correcta."
+          else
+            echo "No se pudo conectar por SFTP:"; tail -20 sftp.err
+            timeout 60 sftp -vvv -o BatchMode=yes -o ConnectTimeout=20 -o IdentitiesOnly=yes -i ~/.ssh/deploy_key \
+               -o UserKnownHostsFile=$HOME/.ssh/known_hosts -b prueba.sftp "${SSH_USER}@${SSH_HOST}" 2>&1 | grep -vi "key_\|kex\|cipher\|mac" | tail -25 || true
+            exit 1
+          fi
+          echo "lftp:"; timeout 60 lftp -d -c "open sftp://${SSH_USER}:@${SSH_HOST}; pwd; cls -1 | head -3" 2>&1 | tail -25 || { echo "lftp no respondió"; exit 1; }
+
       - name: Subir archivos
         if: steps.check.outputs.ready == 'true'
         env:
