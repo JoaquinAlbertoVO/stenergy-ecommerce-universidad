@@ -101,7 +101,12 @@ jobs:
           # Lo que no se publica (expresiones regulares sobre la ruta).
           EXCLUDE='^(\.git|\.github/|database/|docs/|tools/|README\.md$|INSTALL\.md$|wp-config\.php$|\.htaccess$|wp-content/uploads/|wp-content/plugins/(essential-addons-for-elementor-lite|code-snippets|ajax-search-for-woocommerce|wp-whatsapp-chat)/)|/node_modules/|(^|/)\.gitignore$'
 
-          LAST=$(lftp -c "open $URL; cat $REV_FILE" 2>/dev/null | tr -d '[:space:]' || true)
+          SFTP_OPTS=(-o BatchMode=yes -o ConnectTimeout=20 -o IdentitiesOnly=yes -i "$HOME/.ssh/deploy_key" -o UserKnownHostsFile="$HOME/.ssh/known_hosts")
+          LAST=""
+          printf 'get %s rev-remota.txt\nbye\n' "$REV_FILE" > leer.sftp
+          if timeout 60 sftp "${SFTP_OPTS[@]}" -b leer.sftp "${SSH_USER}@${SSH_HOST}" > /dev/null 2>&1; then
+            LAST=$(tr -d '[:space:]' < rev-remota.txt)
+          fi
           HEAD=$(git rev-parse HEAD)
           echo "Último commit publicado: ${LAST:-ninguno} · ahora: $HEAD"
 
@@ -119,18 +124,20 @@ jobs:
               done < subir.txt
               while IFS= read -r f; do echo "rm -f \"$f\""; done < borrar.txt
             } > lote.lftp
-            lftp -f lote.lftp
+            timeout 3000 lftp -f lote.lftp
           else
             echo "Subida completa (primera vez o pedida a mano)."
             git ls-files | grep -Ev "$EXCLUDE" > subir.txt
             echo "Archivos a subir: $(wc -l < subir.txt)"
             mkdir -p ../publicar
             rsync -a --files-from=subir.txt ./ ../publicar/
-            lftp -c "open $URL; mirror -R --parallel=8 --no-perms --verbose=1 ../publicar $DEPLOY_PATH"
+            echo "Subiendo (cada línea es una carpeta o archivo transferido)..."
+            timeout 6000 lftp -c "open $URL; mirror -R --parallel=8 --no-perms --verbose=1 ../publicar $DEPLOY_PATH" | awk 'NR % 500 == 1 { print NR ": " $0; fflush() }'
           fi
 
           echo "$HEAD" > rev.txt
-          lftp -c "open $URL; put -o $REV_FILE rev.txt"
+          printf 'put rev.txt %s\nbye\n' "$REV_FILE" > escribir.sftp
+          timeout 60 sftp "${SFTP_OPTS[@]}" -b escribir.sftp "${SSH_USER}@${SSH_HOST}" > /dev/null
           echo "Publicado $HEAD en https://${DEPLOY_PATH##*/}/"
 
       - name: Borrar la llave del runner
