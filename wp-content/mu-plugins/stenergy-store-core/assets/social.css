@@ -1,0 +1,57 @@
+/* ST Store: redes sociales, compartir y franja de demostración (azul #00247e, amarillo #ffc421). */
+.sts-demo-bar {
+	background: #ffc421;
+	color: #1b2240;
+	font-size: 13px;
+	line-height: 1.4;
+	text-align: center;
+	padding: 6px 16px;
+}
+
+.sts-social { list-style: none; margin: 12px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.sts-social li { margin: 0; }
+.sts-social__link {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	min-height: 36px;
+	padding: 6px 12px;
+	border-radius: 999px;
+	border: 1px solid rgba(255, 255, 255, .35);
+	color: #fff;
+	text-decoration: none;
+	font-size: 14px;
+}
+.sts-social__link:hover, .sts-social__link:focus-visible { background: #ffc421; border-color: #ffc421; color: #00247e; }
+.sts-social__link:focus-visible { outline: 3px solid #ffc421; outline-offset: 2px; }
+
+/* En fondo claro (ficha de producto, páginas). */
+.sts-social--inline, .sts-social--big { margin: 0; }
+.sts-social--inline .sts-social__link, .sts-social--big .sts-social__link { border-color: #c9d1ea; color: #00247e; background: #fff; }
+.sts-social--big .sts-social__link { min-height: 44px; padding: 10px 18px; font-size: 16px; font-weight: 600; }
+
+/* Encabezado: solo íconos para no recargar la franja superior. */
+.sts-social--top { display: inline-flex; vertical-align: middle; margin: 0 0 0 6px; gap: 4px; }
+.sts-social--top .sts-social__link { border: 0; padding: 4px; min-height: 0; }
+.sts-social--top .sts-social__link span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+.sts-share { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 16px 0 0; }
+.sts-share__label { font-weight: 600; color: #1b2240; margin-right: 2px; }
+.sts-share__btn {
+	display: inline-flex;
+	align-items: center;
+	min-height: 38px;
+	padding: 6px 14px;
+	border: 1px solid #c9d1ea;
+	border-radius: 6px;
+	background: #fff;
+	color: #00247e;
+	font: inherit;
+	font-size: 14px;
+	text-decoration: none;
+	cursor: pointer;
+}
+.sts-share__btn[hidden] { display: none; }
+.sts-share__btn:hover { border-color: #00247e; }
+.sts-share__btn:focus-visible { outline: 3px solid #ffc421; outline-offset: 2px; }
+.sts-share__ok { font-size: 14px; color: #1a7f37; }

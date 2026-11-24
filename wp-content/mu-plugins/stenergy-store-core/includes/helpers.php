@@ -15,6 +15,10 @@ function sts_contact_defaults() {
 		'phone'          => '(01) 555-0100',
 		'address'        => 'Av. Ejemplo 123, Lima, Perú (dirección referencial)',
 		'hours'          => 'Lunes a viernes 8:00 a 18:00 · Sábados 9:00 a 13:00',
+		// Redes sociales (URL completa del perfil). Vacío = no se muestra.
+		'tiktok'         => '',
+		'instagram'      => '',
+		'facebook'       => '',
 	);
 }
 

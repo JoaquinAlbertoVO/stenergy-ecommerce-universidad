@@ -22,6 +22,8 @@ pedido se cancela.
 | 16 productos (4 por integrante) con foto y stock | ✅ ver [productos por integrante](sample-data/productos-por-integrante/README.md) |
 | Analítica web: **Google Analytics 4** con eventos de e-commerce (vista → carrito → checkout → compra), chatbot y WhatsApp | ✅ propiedad `G-KRY8R9ENKH` |
 | Aviso de cookies con **Consent Mode v2**, Política de cookies y de privacidad (Ley 29733) | ✅ |
+| Redes sociales (TikTok, Instagram, Facebook), botones para compartir productos con UTM y eventos `social_click` / `share` | ✅ |
+| Publicación en `ststore.<dominio>` (cPanel) con despliegue automático por **GitHub Actions** | ✅ ver [`docs/despliegue.md`](docs/despliegue.md) |
 | Pasarela de pago real y comprobante electrónico SUNAT | 🔲 fuera de alcance del curso |
 
 Detalle por entrega: [`docs/entregas.md`](docs/entregas.md) · Flujo de compra vs. diagrama UML: [`docs/flujo-de-compra.md`](docs/flujo-de-compra.md) · Chatbot: [`docs/chatbot.md`](docs/chatbot.md) · Analítica: [`docs/google-analytics-4.md`](docs/google-analytics-4.md)

@@ -34,6 +34,10 @@ Opciones de esa pantalla:
 | `purchase` | Página "Pedido recibido". Se envía **una sola vez por pedido** (queda marcado en el pedido) | servidor |
 | `chatbot_open` | Se abre el asistente virtual (evento propio) | navegador |
 | `whatsapp_click` | Clic en un enlace de WhatsApp, con `link_location`: encabezado, pie, contenido o chatbot (evento propio) | navegador |
+| `social_click` | Clic hacia el perfil de TikTok, Instagram o Facebook, con `social_network` y `link_location` (evento propio) | navegador |
+| `share` | Producto compartido (evento recomendado de GA4) con `method` (whatsapp, facebook, copiar_enlace, menu_compartir) e `item_id` | navegador |
+
+Visitas que llegan desde TikTok y otras redes: ver *Medir las visitas que llegan desde TikTok* en [`despliegue.md`](despliegue.md).
 
 Cada producto se envía como `item` con `item_id` (SKU), `item_name`, `item_category`, `price` (con IGV, como lo ve el cliente) y `quantity`.
 El evento `purchase` lleva `transaction_id` (número de pedido), `value` (total pagado), `tax` (IGV), `shipping`, `coupon` y `payment_type`.

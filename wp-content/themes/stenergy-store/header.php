@@ -27,6 +27,7 @@ $account = function_exists( 'wc_get_page_permalink' ) ? wc_get_page_permalink( '
 			<?php if ( ! empty( $contact['email'] ) ) : ?>
 				<a href="mailto:<?php echo esc_attr( $contact['email'] ); ?>"><?php echo esc_html( $contact['email'] ); ?></a>
 			<?php endif; ?>
+			<?php echo class_exists( 'STS_Social' ) ? STS_Social::links( 'encabezado', 'sts-social--top' ) : ''; // phpcs:ignore WordPress.Security.EscapeOutput -- escapado en links(). ?>
 		</span>
 	</div>
 </div>

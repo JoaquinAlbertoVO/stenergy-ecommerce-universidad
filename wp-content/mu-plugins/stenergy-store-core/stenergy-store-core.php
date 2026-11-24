@@ -21,10 +21,12 @@ require_once STS_CORE_DIR . '/includes/helpers.php';
 require_once STS_CORE_DIR . '/includes/class-sts-mail-log.php';
 require_once STS_CORE_DIR . '/includes/class-sts-admin.php';
 require_once STS_CORE_DIR . '/includes/class-sts-consent.php';
+require_once STS_CORE_DIR . '/includes/class-sts-social.php';
 
 STS_Mail_Log::init();
 STS_Admin::init();
 STS_Consent::init();
+STS_Social::init();
 
 /**
  * Las clases que dependen de WooCommerce se cargan cuando WooCommerce ya está disponible.

@@ -10,6 +10,7 @@ $c = function_exists( 'sts_contact' ) ? sts_contact() : array();
 			<p class="sts-footer__brand"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/img/logo-st-store.png' ); ?>" alt="ST Store - Ingeniería eléctrica" width="214" height="70"></p>
 			<p>Tienda en línea de equipos y materiales de ingeniería eléctrica, con inventario en tiempo real y compra completa desde la web.</p>
 			<p class="sts-footer__small">Proyecto del curso E-Business y Analítica Web · Datos de demostración.</p>
+			<?php echo class_exists( 'STS_Social' ) ? STS_Social::links( 'pie' ) : ''; // phpcs:ignore WordPress.Security.EscapeOutput -- escapado en links(). ?>
 		</div>
 		<div>
 			<h3>Ayuda</h3>

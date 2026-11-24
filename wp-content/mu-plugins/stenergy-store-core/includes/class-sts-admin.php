@@ -80,7 +80,8 @@ class STS_Admin {
 		}
 		$clean = array();
 		foreach ( array_keys( sts_contact_defaults() ) as $key ) {
-			$clean[ $key ] = isset( $_POST[ $key ] ) ? sanitize_text_field( wp_unslash( $_POST[ $key ] ) ) : '';
+			$value         = isset( $_POST[ $key ] ) ? sanitize_text_field( wp_unslash( $_POST[ $key ] ) ) : '';
+			$clean[ $key ] = in_array( $key, array( 'tiktok', 'instagram', 'facebook' ), true ) ? esc_url_raw( $value, array( 'https' ) ) : $value;
 		}
 		update_option( 'sts_contact', $clean );
 		self::flash( 'Datos de contacto guardados.' );
@@ -178,8 +179,11 @@ class STS_Admin {
 			'phone'          => 'Teléfono',
 			'address'        => 'Dirección',
 			'hours'          => 'Horario de atención',
+			'tiktok'         => 'TikTok (URL del perfil, https://www.tiktok.com/@...)',
+			'instagram'      => 'Instagram (URL del perfil)',
+			'facebook'       => 'Facebook (URL de la página)',
 		);
-		echo '<h2>Datos de contacto</h2><p>Se usan en el pie de página, en la página de contacto y en las respuestas del chatbot.</p>';
+		echo '<h2>Datos de contacto</h2><p>Se usan en el pie de página, en la página de contacto y en las respuestas del chatbot. Las redes que dejes vacías no se muestran.</p>';
 		echo '<form method="post" action="' . esc_url( admin_url( 'admin-post.php' ) ) . '"><table class="form-table">';
 		foreach ( $labels as $key => $label ) {
 			printf(

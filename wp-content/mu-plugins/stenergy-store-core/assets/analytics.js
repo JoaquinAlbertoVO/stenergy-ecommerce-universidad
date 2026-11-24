@@ -112,4 +112,9 @@ jQuery(function ($) {
 			: 'contenido';
 		send('whatsapp_click', { link_location: where, link_url: this.href.split('?')[0] });
 	});
+
+	// social_click: clic hacia el perfil de TikTok / Instagram / Facebook (link_location: encabezado, pie, producto...).
+	$(document.body).on('click', 'a[data-sts-social]', function () {
+		send('social_click', { social_network: $(this).data('sts-social'), link_location: $(this).data('sts-where'), link_url: this.href });
+	});
 });

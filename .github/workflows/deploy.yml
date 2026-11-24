@@ -1,0 +1,67 @@
+# Publica la tienda en el hosting (cPanel) por FTPS cada vez que se sube algo a main.
+# Solo sube los archivos que cambiaron (el primer envío tarda más porque sube todo WordPress).
+#
+# Requiere 3 secretos en GitHub (Settings > Secrets and variables > Actions):
+#   FTP_SERVER    servidor FTP del hosting (por ejemplo ftp.tudominio.com)
+#   FTP_USERNAME  cuenta FTP cuya carpeta raíz es la del subdominio ststore
+#   FTP_PASSWORD  contraseña de esa cuenta
+# Mientras no existan, el workflow termina sin error y no publica nada.
+# Guía completa: docs/despliegue.md
+
+name: Publicar en el hosting
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-hosting
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - name: Verificar que existan los secretos del FTP
+        id: check
+        env:
+          FTP_SERVER: ${{ secrets.FTP_SERVER }}
+        run: |
+          if [ -z "$FTP_SERVER" ]; then
+            echo "Faltan los secretos FTP_SERVER / FTP_USERNAME / FTP_PASSWORD: no se publica nada."
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/checkout@v4
+        if: steps.check.outputs.ready == 'true'
+
+      - name: Subir archivos por FTPS
+        if: steps.check.outputs.ready == 'true'
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps
+          server-dir: ./
+          exclude: |
+            **/.git*
+            **/.git*/**
+            .github/**
+            database/**
+            docs/**
+            tools/**
+            **/node_modules/**
+            wp-config.php
+            .htaccess
+            README.md
+            INSTALL.md
+            wp-content/uploads/**
+            wp-content/plugins/essential-addons-for-elementor-lite/**
+            wp-content/plugins/code-snippets/**
+            wp-content/plugins/ajax-search-for-woocommerce/**
+            wp-content/plugins/wp-whatsapp-chat/**
