@@ -1,20 +1,21 @@
 # Publicación en internet (cPanel + GitHub Actions)
 
-La tienda se publica en el subdominio **`ststore.<dominio>`** de un hosting con cPanel.
-Cada `git push` a `main` la actualiza sola con el workflow [`.github/workflows/deploy.yml`](../.github/workflows/deploy.yml),
-que sube por FTPS solo los archivos que cambiaron.
+La tienda se publica en **https://ststore.mrmendz.com.pe** (subdominio de un hosting con cPanel, carpeta
+`public_html/ststore.mrmendz.com.pe`). Cada `git push` a `main` la actualiza sola con el workflow
+[`.github/workflows/deploy.yml`](../.github/workflows/deploy.yml), que sube por **SFTP** solo los archivos que cambiaron
+(el hosting no tiene FTP ni terminal, pero sí SFTP por el puerto 22 con llave SSH).
 
 ## Puesta en marcha (una sola vez)
 
-1. **Subdominio** — cPanel → *Dominios* → *Crear un nuevo dominio* → `ststore.<dominio>`.
-   Anotar la carpeta raíz que propone (por ejemplo `ststore.<dominio>`).
-2. **HTTPS** — cPanel → *SSL/TLS Status* → *Run AutoSSL* (si el subdominio no tiene certificado aún).
-3. **Cuenta FTP** — cPanel → *Cuentas FTP* → usuario `deploy`, con **directorio = la carpeta del subdominio**.
-   Así el workflow no puede tocar nada fuera de la tienda.
-4. **Secretos en GitHub** — repo → *Settings* → *Secrets and variables* → *Actions* → *New repository secret*:
-   `FTP_SERVER` (servidor FTP que muestra cPanel), `FTP_USERNAME` (usuario completo, `deploy@<dominio>`), `FTP_PASSWORD`.
+1. **Subdominio** — cPanel → *Dominios* → *Crear un nuevo dominio* → `ststore.mrmendz.com.pe` (sin compartir la carpeta raíz).
+2. **HTTPS** — AutoSSL emite el certificado solo en unas horas (cPanel → *SSL/TLS Status*).
+3. **Llave de despliegue** — una llave SSH solo para GitHub Actions, autorizada en cPanel → *Acceso SSH* con el nombre
+   `ststore_deploy`. Para revocar el acceso basta con *Desautorizar* o borrar esa llave.
+4. **GitHub** — repo → *Settings* → *Secrets and variables* → *Actions*:
+   - Secreto `SSH_PRIVATE_KEY`: la llave privada (`gh secret set SSH_PRIVATE_KEY < ruta/de/la/llave`).
+   - Variables `SSH_HOST`, `SSH_USER`, `SSH_KNOWN_HOSTS` (salida de `ssh-keyscan mrmendz.com.pe`) y `DEPLOY_PATH`.
 5. **Primer envío** — repo → *Actions* → *Publicar en el hosting* → *Run workflow*.
-   La primera vez sube WordPress completo (unos 10 000 archivos, puede tardar más de media hora).
+   La primera vez sube WordPress completo; después solo lo que cambia. La casilla *Subir todo de nuevo* fuerza un envío completo.
 6. **Base de datos** — cPanel → *Asistente de bases de datos MySQL*: crear base, usuario y darle *Todos los privilegios*.
 7. **Instalar WordPress** — abrir `https://ststore.<dominio>`: el instalador pide los datos de la base del paso 6
    y crea el administrador. **Usar una contraseña nueva y fuerte**, no las de prueba que figuran en este repo.

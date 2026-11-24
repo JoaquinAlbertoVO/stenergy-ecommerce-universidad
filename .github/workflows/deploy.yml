@@ -1,11 +1,17 @@
-# Publica la tienda en el hosting (cPanel) por FTPS cada vez que se sube algo a main.
-# Solo sube los archivos que cambiaron (el primer envío tarda más porque sube todo WordPress).
+# Publica la tienda en https://ststore.mrmendz.com.pe (cPanel) por SFTP cada vez que se sube algo a main.
 #
-# Requiere 3 secretos en GitHub (Settings > Secrets and variables > Actions):
-#   FTP_SERVER    servidor FTP del hosting (por ejemplo ftp.tudominio.com)
-#   FTP_USERNAME  cuenta FTP cuya carpeta raíz es la del subdominio ststore
-#   FTP_PASSWORD  contraseña de esa cuenta
-# Mientras no existan, el workflow termina sin error y no publica nada.
+# El hosting no tiene FTP ni terminal, pero sí SFTP (puerto 22) con llave SSH.
+# - Primer envío: sube toda la carpeta (WordPress completo, tarda varios minutos).
+# - Siguientes: solo los archivos que cambiaron desde el último commit publicado
+#   (el hash se guarda fuera de la web, en ~/.ststore-deploy-rev) y borra los que se eliminaron.
+#
+# Configuración en GitHub (Settings > Secrets and variables > Actions):
+#   Secreto  SSH_PRIVATE_KEY   llave privada de despliegue (autorizada en cPanel > Acceso SSH como "ststore_deploy")
+#   Variable SSH_HOST          mrmendz.com.pe
+#   Variable SSH_USER          usuario de cPanel
+#   Variable SSH_KNOWN_HOSTS   huellas del servidor (ssh-keyscan mrmendz.com.pe)
+#   Variable DEPLOY_PATH       public_html/ststore.mrmendz.com.pe
+# Mientras falte el secreto, el workflow termina sin error y no publica nada.
 # Guía completa: docs/despliegue.md
 
 name: Publicar en el hosting
@@ -14,6 +20,11 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+    inputs:
+      completo:
+        description: 'Subir todo de nuevo (no solo lo que cambió)'
+        type: boolean
+        default: false
 
 concurrency:
   group: deploy-hosting
@@ -22,15 +33,20 @@ concurrency:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    timeout-minutes: 90
+    timeout-minutes: 120
+    env:
+      SSH_HOST: ${{ vars.SSH_HOST }}
+      SSH_USER: ${{ vars.SSH_USER }}
+      DEPLOY_PATH: ${{ vars.DEPLOY_PATH }}
+      REV_FILE: .ststore-deploy-rev
     steps:
-      - name: Verificar que existan los secretos del FTP
+      - name: Verificar la configuración
         id: check
         env:
-          FTP_SERVER: ${{ secrets.FTP_SERVER }}
+          KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         run: |
-          if [ -z "$FTP_SERVER" ]; then
-            echo "Faltan los secretos FTP_SERVER / FTP_USERNAME / FTP_PASSWORD: no se publica nada."
+          if [ -z "$KEY" ] || [ -z "$SSH_HOST" ] || [ -z "$SSH_USER" ] || [ -z "$DEPLOY_PATH" ]; then
+            echo "Falta el secreto SSH_PRIVATE_KEY o las variables SSH_HOST / SSH_USER / DEPLOY_PATH: no se publica nada."
             echo "ready=false" >> "$GITHUB_OUTPUT"
           else
             echo "ready=true" >> "$GITHUB_OUTPUT"
@@ -38,30 +54,69 @@ jobs:
 
       - uses: actions/checkout@v4
         if: steps.check.outputs.ready == 'true'
-
-      - name: Subir archivos por FTPS
-        if: steps.check.outputs.ready == 'true'
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ftps
-          server-dir: ./
-          exclude: |
-            **/.git*
-            **/.git*/**
-            .github/**
-            database/**
-            docs/**
-            tools/**
-            **/node_modules/**
-            wp-config.php
-            .htaccess
-            README.md
-            INSTALL.md
-            wp-content/uploads/**
-            wp-content/plugins/essential-addons-for-elementor-lite/**
-            wp-content/plugins/code-snippets/**
-            wp-content/plugins/ajax-search-for-woocommerce/**
-            wp-content/plugins/wp-whatsapp-chat/**
+          fetch-depth: 0
+
+      - name: Preparar SFTP
+        if: steps.check.outputs.ready == 'true'
+        env:
+          KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          KNOWN_HOSTS: ${{ vars.SSH_KNOWN_HOSTS }}
+        run: |
+          sudo apt-get -qq update && sudo apt-get -qq install -y lftp > /dev/null
+          mkdir -p ~/.ssh && chmod 700 ~/.ssh
+          printf '%s\n' "$KEY" > ~/.ssh/deploy_key && chmod 600 ~/.ssh/deploy_key
+          printf '%s\n' "$KNOWN_HOSTS" > ~/.ssh/known_hosts
+          cat > ~/.lftprc <<EOF
+          set sftp:connect-program "ssh -a -x -i $HOME/.ssh/deploy_key -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes -o UserKnownHostsFile=$HOME/.ssh/known_hosts"
+          set net:max-retries 3
+          set net:timeout 30
+          set cmd:fail-exit yes
+          EOF
+
+      - name: Subir archivos
+        if: steps.check.outputs.ready == 'true'
+        env:
+          FULL: ${{ inputs.completo }}
+        run: |
+          set -euo pipefail
+          URL="sftp://${SSH_USER}:@${SSH_HOST}"
+
+          # Lo que no se publica (expresiones regulares sobre la ruta).
+          EXCLUDE='^(\.git|\.github/|database/|docs/|tools/|README\.md$|INSTALL\.md$|wp-config\.php$|\.htaccess$|wp-content/uploads/|wp-content/plugins/(essential-addons-for-elementor-lite|code-snippets|ajax-search-for-woocommerce|wp-whatsapp-chat)/)|/node_modules/|(^|/)\.gitignore$'
+
+          LAST=$(lftp -c "open $URL; cat $REV_FILE" 2>/dev/null | tr -d '[:space:]' || true)
+          HEAD=$(git rev-parse HEAD)
+          echo "Último commit publicado: ${LAST:-ninguno} · ahora: $HEAD"
+
+          if [ "${FULL:-false}" != "true" ] && [ -n "$LAST" ] && git cat-file -e "$LAST^{commit}" 2>/dev/null; then
+            git diff --name-only --diff-filter=ACMRT "$LAST" "$HEAD" | grep -Ev "$EXCLUDE" > subir.txt || true
+            git diff --name-only --diff-filter=D "$LAST" "$HEAD" | grep -Ev "$EXCLUDE" > borrar.txt || true
+            echo "Archivos a subir: $(wc -l < subir.txt) · a borrar: $(wc -l < borrar.txt)"
+            {
+              echo "open $URL"
+              echo "cd $DEPLOY_PATH"
+              while IFS= read -r f; do
+                d=$(dirname "$f")
+                [ "$d" != "." ] && echo "mkdir -p -f \"$d\""
+                echo "put -O \"$d\" \"$f\""
+              done < subir.txt
+              while IFS= read -r f; do echo "rm -f \"$f\""; done < borrar.txt
+            } > lote.lftp
+            lftp -f lote.lftp
+          else
+            echo "Subida completa (primera vez o pedida a mano)."
+            git ls-files | grep -Ev "$EXCLUDE" > subir.txt
+            echo "Archivos a subir: $(wc -l < subir.txt)"
+            mkdir -p ../publicar
+            rsync -a --files-from=subir.txt ./ ../publicar/
+            lftp -c "open $URL; mirror -R --parallel=8 --no-perms --verbose=1 ../publicar $DEPLOY_PATH"
+          fi
+
+          echo "$HEAD" > rev.txt
+          lftp -c "open $URL; put -o $REV_FILE rev.txt"
+          echo "Publicado $HEAD en https://${DEPLOY_PATH##*/}/"
+
+      - name: Borrar la llave del runner
+        if: always()
+        run: rm -f ~/.ssh/deploy_key
