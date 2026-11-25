@@ -64,6 +64,27 @@ add_action(
 );
 
 /**
+ * Fuerza HTTPS: si la dirección del sitio es https://, cualquier visita por http:// se redirige (301) a la misma URL segura.
+ * En localhost (dirección http://) no hace nada.
+ */
+add_action(
+	'init',
+	function () {
+		if ( is_ssl() || 'https' !== wp_parse_url( home_url(), PHP_URL_SCHEME ) ) {
+			return;
+		}
+		if ( ( defined( 'WP_CLI' ) && WP_CLI ) || wp_doing_cron() ) {
+			return;
+		}
+		$host = wp_parse_url( home_url(), PHP_URL_HOST );
+		$uri  = isset( $_SERVER['REQUEST_URI'] ) ? wp_unslash( $_SERVER['REQUEST_URI'] ) : '/'; // phpcs:ignore
+		wp_redirect( 'https://' . $host . $uri, 301 ); // phpcs:ignore WordPress.Security.SafeRedirect
+		exit;
+	},
+	0
+);
+
+/**
  * Regenera los enlaces permanentes una vez, en la petición siguiente a la configuración automática,
  * cuando WooCommerce ya conoce la página "Tienda" (si no, /tienda/ se muestra vacía).
  */
